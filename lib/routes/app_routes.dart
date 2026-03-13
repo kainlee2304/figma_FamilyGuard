@@ -34,7 +34,7 @@ import '../screens/safe_zone_edit_active_screen.dart';
 import '../screens/medical_appointment_screen.dart';
 import '../screens/physical_activity_screen.dart';
 import '../screens/member_list_screen.dart';
-
+import '../screens/safe_zone_screen.dart';
 
 /// App Routes - Định nghĩa tất cả routes cho navigation
 class AppRoutes {
@@ -105,7 +105,7 @@ class AppRoutes {
 
         // ── Safe zone screens ──────────────────────────────────────────
         safeZoneAlert: (context) => const SafeZoneAlertScreen(),
-        safeZoneManagement: (context) => const SafeZoneActiveScreen(),
+        safeZoneManagement: (context) => SafeZoneScreen(), // Đã đổi sang màn chọn thành viên
         safeZoneSelectMember: (context) => const SafeZoneSelectMemberScreen(),
         safeZoneEmpty: (context) => const SafeZoneEmptyScreen(),
         safeZoneAdd: (context) => const SafeZoneAddScreen(),
@@ -116,7 +116,13 @@ class AppRoutes {
         safeZoneAlertSettings: (context) => const SafeZoneAlertSettingsScreen(),
         safeZoneInfo: (context) => const SafeZoneInfoScreen(),
         safeZoneConfig: (context) => const SafeZoneConfigScreen(),
-        safeZoneActive: (context) => const SafeZoneActiveScreen(),
+        safeZoneActive: (context) => SafeZoneMemberScreen(member: {
+          'name': 'Nguyễn Văn A',
+          'role': 'Người cao tuổi',
+          'avatar': 'A',
+          'activeZones': 2,
+          'color': const Color(0xFF80CBC4),
+        }), // Đổi sang màn SafeZoneMemberScreen mẫu, truyền member mẫu
         safeZoneEditActive: (context) => const SafeZoneEditActiveScreen(),
         medicalAppointment: (context) => const MedicalAppointmentScreen(),
         physicalActivity: (context) => const PhysicalActivityScreen(),

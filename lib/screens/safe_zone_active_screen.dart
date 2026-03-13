@@ -9,17 +9,18 @@ import '../theme/app_colors.dart';
 import '../widgets/common/app_dialog.dart';
 
 // ═══════════════════════════════════════════════════════════════════
-// SAFE ZONE ACTIVE SCREEN – Redesigned
+// SAFE ZONE MEMBER SCREEN – Redesigned
 // ═══════════════════════════════════════════════════════════════════
-class SafeZoneActiveScreen extends StatefulWidget {
+class SafeZoneMemberScreen extends StatefulWidget {
+  final Map<String, dynamic> member;
   final VoidCallback? onBackToHome;
-  const SafeZoneActiveScreen({super.key, this.onBackToHome});
+  const SafeZoneMemberScreen({Key? key, required this.member, this.onBackToHome}) : super(key: key);
 
   @override
-  State<SafeZoneActiveScreen> createState() => _SafeZoneActiveScreenState();
+  State<SafeZoneMemberScreen> createState() => _SafeZoneMemberScreenState();
 }
 
-class _SafeZoneActiveScreenState extends State<SafeZoneActiveScreen> {
+class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
   List<SafeZone> get _zones => SafeZoneProvider.of(context).zones;
   int get _activeCount => _zones.where((z) => z.isActive).length;
 
@@ -108,6 +109,20 @@ class _SafeZoneActiveScreenState extends State<SafeZoneActiveScreen> {
     final bottomPad = MediaQuery.of(context).padding.bottom;
     return Scaffold(
       backgroundColor: AppColors.background,
+      appBar: AppBar(
+        title: const Text('Vùng an toàn'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new_rounded),
+          onPressed: () {
+            if (Navigator.of(context, rootNavigator: true).canPop()) {
+              Navigator.of(context, rootNavigator: true).pop();
+            }
+          },
+        ),
+        elevation: 0,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+      ),
       bottomNavigationBar: Padding(
         padding: EdgeInsets.fromLTRB(24, 16, 24, 24 + bottomPad),
         child: SizedBox(
@@ -126,17 +141,34 @@ class _SafeZoneActiveScreenState extends State<SafeZoneActiveScreen> {
       body: SafeArea(
         bottom: false,
         child: Column(children: [
-          _buildHeader(),
+          _buildMemberCard(),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text('Vùng an toàn đang hoạt động',
+                    style: TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.w600)),
+                Row(children: const [
+                  Icon(Icons.swipe, size: 16, color: Color(0xFF00ACB2)),
+                  SizedBox(width: 4),
+                  Text('Vuốt để sửa/xóa',
+                      style: TextStyle(
+                          fontSize: 13, color: Color(0xFF00ACB2))),
+                ]),
+              ],
+            ),
+          ),
           Expanded(
             child: Stack(children: [
               ListView.builder(
                 padding: EdgeInsets.fromLTRB(16, 0, 16, 100 + bottomPad),
-                itemCount: _zones.length + 1, // +1 for member card
+                itemCount: _zones.length, // Không còn card thành viên ở đầu
                 itemBuilder: (_, i) {
-                  if (i == 0) return _buildMemberCard();
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 12),
-                    child: _buildSwipeableZoneCard(_zones[i - 1]),
+                    child: _buildSwipeableZoneCard(_zones[i]),
                   );
                 },
               ),
@@ -219,6 +251,7 @@ class _SafeZoneActiveScreenState extends State<SafeZoneActiveScreen> {
 
   // ── Member Card ───────────────────────────────────────────────
   Widget _buildMemberCard() {
+    final member = widget.member;
     return Padding(
       padding: const EdgeInsets.only(top: 8, bottom: 16),
       child: Container(
@@ -241,15 +274,12 @@ class _SafeZoneActiveScreenState extends State<SafeZoneActiveScreen> {
             width: 60,
             height: 60,
             child: Stack(clipBehavior: Clip.none, children: [
-              Container(
-                width: 56,
-                height: 56,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(width: 2, color: const Color(0x3300BD9D)),
-                ),
-                child: ClipOval(
-                  child: CustomPaint(painter: _AvatarPainter()),
+              CircleAvatar(
+                radius: 28,
+                backgroundColor: member['color'] ?? const Color(0xFF80CBC4),
+                child: Text(
+                  (member['avatar'] ?? '').toString(),
+                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 28),
                 ),
               ),
               Positioned(
@@ -274,7 +304,7 @@ class _SafeZoneActiveScreenState extends State<SafeZoneActiveScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Nguyễn Văn A',
+                Text(member['name'] ?? '',
                     style: TextStyle(
                       fontFamily: 'Lexend',
                       fontSize: ResponsiveHelper.sp(context, 18),
@@ -286,7 +316,7 @@ class _SafeZoneActiveScreenState extends State<SafeZoneActiveScreen> {
                   const Icon(Icons.shield_rounded,
                       size: 15, color: Color(0xFF45A191)),
                   const SizedBox(width: 5),
-                  Text('$_activeCount vùng an toàn đang bật',
+                  Text('${member['activeZones'] ?? 0} vùng an toàn đang bật',
                       style: TextStyle(
                         fontFamily: 'Lexend',
                         fontSize: ResponsiveHelper.sp(context, 13),
@@ -294,22 +324,15 @@ class _SafeZoneActiveScreenState extends State<SafeZoneActiveScreen> {
                         color: const Color(0xFF45A191),
                       )),
                 ]),
+                if (member['role'] != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2.0),
+                    child: Text(
+                      member['role'],
+                      style: const TextStyle(color: Colors.grey, fontSize: 12),
+                    ),
+                  ),
               ],
-            ),
-          ),
-
-          // Settings
-          GestureDetector(
-            onTap: () =>
-                Navigator.of(context).pushNamed(AppRoutes.safeZoneEditActive),
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: const BoxDecoration(
-                color: AppColors.kPrimaryLight,
-                shape: BoxShape.circle,
-              ),
-              child: const Icon(Icons.settings_rounded,
-                  size: 18, color: Color(0xFF00BD9D)),
             ),
           ),
         ]),
