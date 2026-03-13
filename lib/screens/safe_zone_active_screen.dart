@@ -21,7 +21,7 @@ class SafeZoneMemberScreen extends StatefulWidget {
 }
 
 class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
-  List<SafeZone> get _zones => SafeZoneProvider.of(context).zones;
+  List<SafeZone> get _zones => SafeZoneProvider.of(context).getZonesForMember(widget.member['id']);
   int get _activeCount => _zones.where((z) => z.isActive).length;
 
   // ── toast ──────────────────────────────────────────────────────
@@ -71,7 +71,7 @@ class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
             radius: radius,
             address: address,
             isActive: true,
-            recipientIds: ['m1', 'm2', 'm3'],
+            recipientIds: [widget.member['id']],
           ));
           _toast('Đã thêm "$name"');
         },

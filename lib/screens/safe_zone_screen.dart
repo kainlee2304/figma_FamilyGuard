@@ -7,6 +7,7 @@ class SafeZoneScreen extends StatelessWidget {
 
   final List<Map<String, dynamic>> members = [
     {
+      'id': 'm1',
       'name': 'Nguyễn Văn A',
       'role': 'Người cao tuổi',
       'avatar': 'A',
@@ -14,6 +15,7 @@ class SafeZoneScreen extends StatelessWidget {
       'color': const Color(0xFF80CBC4),
     },
     {
+      'id': 'm2',
       'name': 'Trần Thị B',
       'role': 'Người cao tuổi',
       'avatar': 'B',
@@ -21,6 +23,7 @@ class SafeZoneScreen extends StatelessWidget {
       'color': const Color(0xFFFFCC80),
     },
     {
+      'id': 'm3',
       'name': 'Lê Văn C',
       'role': 'Người chăm sóc',
       'avatar': 'C',
