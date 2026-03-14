@@ -66,7 +66,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
     _selectedYear = now.year;
 
     _members = const [
-      _Member(id: 'm1', name: 'Bà Lan', color: Color(0xFF00BD9D)),
+      _Member(id: 'm1', name: 'Bà Lan', color: Color(0xFF00ACB2)),
       _Member(id: 'm2', name: 'Ông Hùng', color: Color(0xFF3B82F6)),
       _Member(id: 'm3', name: 'Bé Bo', color: Color(0xFFF59E0B)),
     ];
@@ -320,7 +320,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(Icons.add_location_alt_rounded,
-                        color: Color(0xFF00BD9D), size: 20),
+                        color: Color(0xFF00ACB2), size: 20),
                   ),
                   const SizedBox(width: 10),
                   const Text('Thêm hoạt động',
@@ -362,10 +362,10 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
                       _sheetLabel('Thời lượng: ${duration >= 60 ? '${(duration / 60).toStringAsFixed(1)} giờ' : '${duration.round()} phút'}'),
                       SliderTheme(
                         data: SliderThemeData(
-                          activeTrackColor: const Color(0xFF00BD9D),
-                          inactiveTrackColor: const Color(0xFF00BD9D).withAlpha(30),
-                          thumbColor: const Color(0xFF00BD9D),
-                          overlayColor: const Color(0xFF00BD9D).withAlpha(30),
+                          activeTrackColor: const Color(0xFF00ACB2),
+                          inactiveTrackColor: const Color(0xFF00ACB2).withAlpha(30),
+                          thumbColor: const Color(0xFF00ACB2),
+                          overlayColor: const Color(0xFF00ACB2).withAlpha(30),
                           trackHeight: 4,
                           thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8),
                         ),
@@ -387,7 +387,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
                             builder: (c, child) => Theme(
                               data: Theme.of(c).copyWith(
                                 colorScheme: const ColorScheme.light(
-                                    primary: Color(0xFF00BD9D)),
+                                    primary: Color(0xFF00ACB2)),
                               ),
                               child: child!,
                             ),
@@ -405,7 +405,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
                           ),
                           child: Row(children: [
                             const Icon(Icons.access_time_rounded,
-                                size: 18, color: Color(0xFF00BD9D)),
+                                size: 18, color: Color(0xFF00ACB2)),
                             const SizedBox(width: 8),
                             Text(
                               '${startTime.hour.toString().padLeft(2, '0')}:${startTime.minute.toString().padLeft(2, '0')}',
@@ -442,12 +442,12 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
                               width: 38, height: 38,
                               decoration: BoxDecoration(
                                 color: isOn
-                                    ? const Color(0xFF00BD9D)
+                                    ? const Color(0xFF00ACB2)
                                     : const Color(0xFFF9FAFB),
                                 borderRadius: BorderRadius.circular(10),
                                 border: Border.all(
                                   color: isOn
-                                      ? const Color(0xFF00BD9D)
+                                      ? const Color(0xFF00ACB2)
                                       : const Color(0xFFE5E7EB),
                                 ),
                               ),
@@ -527,7 +527,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
                                   style: const TextStyle(
                                       fontFamily: 'Lexend',
                                       color: Colors.white)),
-                              backgroundColor: const Color(0xFF00BD9D),
+                              backgroundColor: const Color(0xFF00ACB2),
                               behavior: SnackBarBehavior.floating,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12)),
@@ -576,7 +576,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(color: Color(0xFF00BD9D), width: 1.5),
+          borderSide: const BorderSide(color: Color(0xFF00ACB2), width: 1.5),
         ),
       );
 
@@ -589,10 +589,10 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 10),
           decoration: BoxDecoration(
-            color: isActive ? const Color(0xFF00BD9D) : const Color(0xFFF9FAFB),
+            color: isActive ? const Color(0xFF00ACB2) : const Color(0xFFF9FAFB),
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: isActive ? const Color(0xFF00BD9D) : const Color(0xFFE5E7EB),
+              color: isActive ? const Color(0xFF00ACB2) : const Color(0xFFE5E7EB),
             ),
           ),
           child: Row(
@@ -706,7 +706,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
       backgroundColor: AppColors.background,
       floatingActionButton: FloatingActionButton(
         onPressed: _showAddActivitySheet,
-        backgroundColor: const Color(0xFF00BD9D),
+        backgroundColor: const Color(0xFF00ACB2),
         shape: const CircleBorder(),
         child: const Icon(Icons.add_rounded, color: Colors.white, size: 28),
       ),
@@ -753,7 +753,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
         border: const Border(
           bottom: BorderSide(
             width: 1,
-            color: Color(0x1900BD9D),
+            color: Color(0x1900ACB2),
           ),
         ),
       ),
@@ -954,11 +954,11 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
           height: 44,
           padding: EdgeInsets.symmetric(horizontal: ResponsiveHelper.horizontalPadding(context)),
           decoration: ShapeDecoration(
-            color: const Color(0x1900BD9D),
+            color: const Color(0x1900ACB2),
             shape: RoundedRectangleBorder(
               side: const BorderSide(
                 width: 1,
-                color: Color(0x3300BD9D),
+                color: Color(0x3300ACB2),
               ),
               borderRadius: BorderRadius.circular(24),
             ),
@@ -976,7 +976,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
                 _monthLabel,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: const Color(0xFF00BD9D),
+                  color: const Color(0xFF00ACB2),
                   fontSize: ResponsiveHelper.sp(context, 14),
                   fontFamily: 'Lexend',
                   fontWeight: FontWeight.w700,
@@ -1007,7 +1007,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
         shape: RoundedRectangleBorder(
           side: const BorderSide(
             width: 1,
-            color: Color(0x3300BD9D),
+            color: Color(0x3300ACB2),
           ),
           borderRadius: BorderRadius.circular(9999),
         ),
@@ -1131,7 +1131,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
           shape: RoundedRectangleBorder(
             side: BorderSide(
               width: 1,
-              color: isToday ? const Color(0x3300BD9D) : const Color(0xFFF3F4F6),
+              color: isToday ? const Color(0x3300ACB2) : const Color(0xFFF3F4F6),
             ),
             borderRadius: BorderRadius.circular(9999),
           ),
@@ -1214,7 +1214,7 @@ class _ActivityHistoryScreenState extends State<ActivityHistoryScreen> {
                       shape: RoundedRectangleBorder(
                         side: const BorderSide(
                           width: 1,
-                          color: Color(0x1900BD9D),
+                          color: Color(0x1900ACB2),
                         ),
                         borderRadius: BorderRadius.circular(24),
                       ),

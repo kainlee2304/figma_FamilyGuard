@@ -254,7 +254,7 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
             decoration: BoxDecoration(
-              color: const Color(0x1900BD9D),
+              color: const Color(0x1900ACB2),
               borderRadius: BorderRadius.circular(9999),
             ),
             child: Row(
@@ -349,7 +349,7 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0x0C00BD9D), width: 1),
+        border: Border.all(color: const Color(0x0C00ACB2), width: 1),
         boxShadow: const [
           BoxShadow(
             color: Color(0x0C000000),
@@ -455,94 +455,157 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
   }
   // ── Feature selection popup for "Quản lý lịch nhắc" ─────────
   void _showFeatureSelectionDialog() {
-    final memberName = widget.member?.name ?? 'Bà Lan';
-    showDialog(
+    final member = widget.member;
+    showModalBottomSheet(
       context: context,
-      barrierColor: Colors.black26,
-      builder: (ctx) => Dialog(
-        backgroundColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-        insetPadding: const EdgeInsets.symmetric(horizontal: 32),
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 24, 20, 20),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                'Chọn tính năng cho $memberName',
-                style: const TextStyle(
-                  fontFamily: 'Lexend',
-                  fontSize: 17,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.primary,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (_) => Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        ),
+        padding: EdgeInsets.fromLTRB(20, 12, 20, MediaQuery.of(context).viewInsets.bottom + 24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // Handle bar
+            Container(
+              width: 40, height: 4,
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.circular(2),
+              ),
+            ),
+            const SizedBox(height: 16),
+            // Title
+            Text(
+              'Chọn tính năng cho ${member?.name ?? "thành viên"}',
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                color: Color(0xFF0C1D1A),
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 20),
+            // Grid 2x2 responsive
+            GridView.count(
+              crossAxisCount: 2,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              crossAxisSpacing: 12,
+              mainAxisSpacing: 12,
+              childAspectRatio: 1.3,
+              children: [
+                _featureCard(
+                  context,
+                  icon: Icons.medication_outlined,
+                  label: 'Nhắc nhở\nuống thuốc',
+                  bgColor: const Color(0xFFEDE7F6),
+                  iconColor: const Color(0xFF7E57C2),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.of(context).pushNamed(AppRoutes.reminderList);
+                  },
                 ),
-              ),
-              const SizedBox(height: 20),
-              GridView.count(
-                crossAxisCount: 2,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                mainAxisSpacing: 14,
-                crossAxisSpacing: 14,
-                childAspectRatio: 1.05,
-                children: [
-                  _buildFeatureOption(
-                    icon: Icons.medication_outlined,
-                    label: 'Nhắc nhở uống thuốc',
-                    iconColor: const Color(0xFF8B5CF6),
-                    bgColor: const Color(0xFFF3ECFF),
-                    onTap: () {
-                      Navigator.of(ctx).pop();
-                      Navigator.of(context).pushNamed(AppRoutes.reminderList);
-                    },
-                  ),
-                  _buildFeatureOption(
-                    icon: Icons.calendar_month_outlined,
-                    label: 'Lịch hẹn khám bệnh',
-                    iconColor: const Color(0xFF14B8A6),
-                    bgColor: AppColors.kPrimaryLight,
-                    onTap: () {
-                      Navigator.of(ctx).pop();
-                      Navigator.of(context).pushNamed(AppRoutes.medicalAppointment);
-                    },
-                  ),
-                  _buildFeatureOption(
-                    icon: Icons.directions_run_outlined,
-                    label: 'Hoạt động thể chất',
-                    iconColor: const Color(0xFFF59E0B),
-                    bgColor: const Color(0xFFFFF8E1),
-                    onTap: () {
-                      Navigator.of(ctx).pop();
-                      Navigator.of(context).pushNamed(AppRoutes.physicalActivity);
-                    },
-                  ),
-                  _buildFeatureOption(
-                    icon: Icons.favorite_outline,
-                    label: 'Theo dõi sức khỏe',
-                    iconColor: const Color(0xFFEC4899),
-                    bgColor: const Color(0xFFFCE4EC),
-                    onTap: () {
-                      Navigator.of(ctx).pop();
-                      Navigator.of(context).pushNamed(AppRoutes.activityReport);
-                    },
-                  ),
-                ],
-              ),
-              const SizedBox(height: 16),
-              GestureDetector(
-                onTap: () => Navigator.of(ctx).pop(),
-                child: const Text(
-                  'Hủy',
-                  style: TextStyle(
-                    fontFamily: 'Lexend',
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.textMuted,
-                  ),
+                _featureCard(
+                  context,
+                  icon: Icons.calendar_month_outlined,
+                  label: 'Lịch hẹn\nkhám bệnh',
+                  bgColor: const Color(0xFFE8F8F7),
+                  iconColor: const Color(0xFF00ACB2),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.of(context).pushNamed(AppRoutes.medicalAppointment);
+                  },
                 ),
+                _featureCard(
+                  context,
+                  icon: Icons.directions_run,
+                  label: 'Hoạt động\nthể chất',
+                  bgColor: const Color(0xFFFFF8E1),
+                  iconColor: const Color(0xFFFFA000),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.of(context).pushNamed(AppRoutes.physicalActivity);
+                  },
+                ),
+                _featureCard(
+                  context,
+                  icon: Icons.favorite_outline,
+                  label: 'Theo dõi\nsức khỏe',
+                  bgColor: const Color(0xFFFCE4EC),
+                  iconColor: const Color(0xFFE91E63),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.of(context).pushNamed(AppRoutes.activityReport);
+                  },
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            // Nút Hủy
+            SizedBox(
+              width: double.infinity,
+              child: TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('Hủy', style: TextStyle(color: Colors.grey, fontSize: 15)),
               ),
-            ],
-          ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // Widget helper cho mỗi card tính năng:
+  Widget _featureCard(
+    BuildContext context, {
+    required IconData icon,
+    required String label,
+    required Color bgColor,
+    required Color iconColor,
+    required VoidCallback onTap,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: Colors.grey.shade200),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.05),
+              blurRadius: 8,
+              offset: const Offset(0, 2),
+            )
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: bgColor,
+                shape: BoxShape.circle,
+              ),
+              child: Icon(icon, color: iconColor, size: 24),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              label,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 13,
+                fontWeight: FontWeight.w500,
+                color: Color(0xFF0C1D1A),
+                height: 1.3,
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -619,7 +682,7 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: const Color(0x0C00BD9D), width: 1),
+          border: Border.all(color: const Color(0x0C00ACB2), width: 1),
           boxShadow: const [
             BoxShadow(
               color: Color(0x0C000000),
@@ -635,7 +698,7 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
               width: 48,
               height: 48,
               decoration: BoxDecoration(
-                color: const Color(0x1900BD9D),
+                color: const Color(0x1900ACB2),
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Icon(

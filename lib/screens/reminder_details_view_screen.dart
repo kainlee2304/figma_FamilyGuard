@@ -68,7 +68,7 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
         shape: RoundedRectangleBorder(
           side: BorderSide(
             width: 1,
-            color: const Color(0x1900BD9D),
+            color: const Color(0x1900ACB2),
           ),
         ),
       ),
@@ -129,7 +129,7 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
         shape: RoundedRectangleBorder(
           side: BorderSide(
             width: 1,
-            color: const Color(0x0C00BD9D),
+            color: const Color(0x0C00ACB2),
           ),
           borderRadius: BorderRadius.circular(20),
         ),
@@ -184,13 +184,13 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
                   Icon(
                     Icons.access_time,
                     size: 16,
-                    color: const Color(0xFF00BD9D),
+                    color: const Color(0xFF00ACB2),
                   ),
                   Text(
                     '08:00 - Hàng ngày',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: const Color(0xFF00BD9D),
+                      color: const Color(0xFF00ACB2),
                       fontSize: ResponsiveHelper.sp(context, 16),
                       fontFamily: 'Lexend',
                       fontWeight: FontWeight.w500,
@@ -237,7 +237,7 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
             shape: RoundedRectangleBorder(
               side: BorderSide(
                 width: 1,
-                color: const Color(0x0C00BD9D),
+                color: const Color(0x0C00ACB2),
               ),
               borderRadius: BorderRadius.circular(20),
             ),
@@ -260,19 +260,19 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
                   width: 48,
                   height: 48,
                   decoration: ShapeDecoration(
-                    color: const Color(0xFF00BD9D),
+                    color: const Color(0xFF00ACB2),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(9999),
                     ),
                     shadows: [
                       BoxShadow(
-                        color: Color(0x4C00BD9D),
+                        color: Color(0x4C00ACB2),
                         blurRadius: 6,
                         offset: Offset(0, 4),
                         spreadRadius: -4,
                       ),
                       BoxShadow(
-                        color: Color(0x4C00BD9D),
+                        color: Color(0x4C00ACB2),
                         blurRadius: 15,
                         offset: Offset(0, 10),
                         spreadRadius: -3,
@@ -349,8 +349,8 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
             height: heights[index],
             decoration: ShapeDecoration(
               color: isPlayed
-                  ? const Color(0xFF00BD9D)
-                  : const Color(0x4C00BD9D),
+                  ? const Color(0xFF00ACB2)
+                  : const Color(0x4C00ACB2),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(9999),
               ),
@@ -392,7 +392,7 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
             shape: RoundedRectangleBorder(
               side: BorderSide(
                 width: 1,
-                color: const Color(0x0C00BD9D),
+                color: const Color(0x0C00ACB2),
               ),
               borderRadius: BorderRadius.circular(20),
             ),
@@ -420,7 +420,7 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
                       shape: RoundedRectangleBorder(
                         side: BorderSide(
                           width: 2,
-                          color: const Color(0x3300BD9D),
+                          color: const Color(0x3300ACB2),
                         ),
                         borderRadius: BorderRadius.circular(9999),
                       ),
@@ -463,7 +463,7 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
               // Checkmark
               Icon(
                 Icons.check_circle,
-                color: const Color(0xFF00BD9D),
+                color: const Color(0xFF00ACB2),
                 size: 24,
               ),
             ],
@@ -504,7 +504,7 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
             shape: RoundedRectangleBorder(
               side: BorderSide(
                 width: 1,
-                color: const Color(0x0C00BD9D),
+                color: const Color(0x0C00ACB2),
               ),
               borderRadius: BorderRadius.circular(20),
             ),
@@ -528,14 +528,14 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
                     width: 40,
                     height: 40,
                     decoration: ShapeDecoration(
-                      color: const Color(0x1900BD9D),
+                      color: const Color(0x1900ACB2),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),
                     ),
                     child: Icon(
                       Icons.notifications_active,
-                      color: const Color(0xFF00BD9D),
+                      color: const Color(0xFF00ACB2),
                       size: 24,
                     ),
                   ),
@@ -577,7 +577,7 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
       width: 44,
       height: 24,
       decoration: ShapeDecoration(
-        color: _isActive ? const Color(0xFF00BD9D) : const Color(0xFFE2E8F0),
+        color: _isActive ? const Color(0xFF00ACB2) : const Color(0xFFE2E8F0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(9999),
         ),
@@ -626,7 +626,7 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
         shape: RoundedRectangleBorder(
           side: BorderSide(
             width: 1,
-            color: const Color(0x1900BD9D),
+            color: const Color(0x1900ACB2),
           ),
         ),
       ),
@@ -703,7 +703,7 @@ class _ReminderDetailsViewScreenState extends State<ReminderDetailsViewScreen> {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('Đã lưu thay đổi'),
-        backgroundColor: Color(0xFF00BD9D),
+        backgroundColor: Color(0xFF00ACB2),
         behavior: SnackBarBehavior.floating,
       ),
     );

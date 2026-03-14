@@ -42,7 +42,7 @@ class _SafeZoneAlertSettingsScreenState
 
   // ── Danh sách người nhận ─────────────────────────────────────────
   final List<_AlertRecipient> _recipients = [
-    _AlertRecipient(name: 'Bà Lan', role: 'Người thân chính', initials: 'BL', color: const Color(0xFF00BD9D)),
+    _AlertRecipient(name: 'Bà Lan', role: 'Người thân chính', initials: 'BL', color: const Color(0xFF00ACB2)),
     _AlertRecipient(name: 'Ông Hùng', role: 'Người bảo hộ', initials: 'ÔH', color: const Color(0xFF3B82F6)),
   ];
 
@@ -126,7 +126,7 @@ class _SafeZoneAlertSettingsScreenState
               decoration: ShapeDecoration(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
-                  side: const BorderSide(width: 1, color: Color(0x3300BD9D)),
+                  side: const BorderSide(width: 1, color: Color(0x3300ACB2)),
                   borderRadius: BorderRadius.circular(9999),
                 ),
               ),
@@ -162,12 +162,12 @@ class _SafeZoneAlertSettingsScreenState
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0x3300BD9D)),
+          side: const BorderSide(width: 1, color: Color(0x3300ACB2)),
           borderRadius: BorderRadius.circular(20),
         ),
         shadows: const [
           BoxShadow(
-            color: Color(0x1400BD9D),
+            color: Color(0x1400ACB2),
             blurRadius: 20,
             offset: Offset(0, 4),
             spreadRadius: -2,
@@ -264,7 +264,7 @@ class _SafeZoneAlertSettingsScreenState
               ? Colors.white
               : Colors.white.withValues(alpha: 0.60),
           shape: RoundedRectangleBorder(
-            side: const BorderSide(width: 1, color: Color(0x1900BD9D)),
+            side: const BorderSide(width: 1, color: Color(0x1900ACB2)),
             borderRadius: BorderRadius.circular(20),
           ),
         ),
@@ -325,7 +325,7 @@ class _SafeZoneAlertSettingsScreenState
             height: 24,
             decoration: BoxDecoration(
               color: isEnabled
-                  ? const Color(0xFF00BD9D)
+                  ? const Color(0xFF00ACB2)
                   : const Color(0xFFCBD5E1),
               borderRadius: BorderRadius.circular(9999),
             ),
@@ -383,13 +383,13 @@ class _SafeZoneAlertSettingsScreenState
               width: 22,
               height: 22,
               decoration: ShapeDecoration(
-                color: value ? const Color(0xFF00BD9D) : Colors.white,
+                color: value ? const Color(0xFF00ACB2) : Colors.white,
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     width: 1,
                     color: value
-                        ? const Color(0xFF00BD9D)
-                        : const Color(0x4C00BD9D),
+                        ? const Color(0xFF00ACB2)
+                        : const Color(0x4C00ACB2),
                   ),
                   borderRadius: BorderRadius.circular(8),
                 ),
@@ -433,13 +433,13 @@ class _SafeZoneAlertSettingsScreenState
             width: 22,
             height: 22,
             decoration: ShapeDecoration(
-              color: isSelected ? const Color(0xFF00BD9D) : Colors.white,
+              color: isSelected ? const Color(0xFF00ACB2) : Colors.white,
               shape: RoundedRectangleBorder(
                 side: BorderSide(
                   width: 1,
                   color: isSelected
-                      ? const Color(0xFF00BD9D)
-                      : const Color(0x4C00BD9D),
+                      ? const Color(0xFF00ACB2)
+                      : const Color(0x4C00ACB2),
                 ),
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -491,12 +491,12 @@ class _SafeZoneAlertSettingsScreenState
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
-              side: const BorderSide(width: 1, color: Color(0x1900BD9D)),
+              side: const BorderSide(width: 1, color: Color(0x1900ACB2)),
               borderRadius: BorderRadius.circular(20),
             ),
             shadows: const [
               BoxShadow(
-                color: Color(0x1400BD9D),
+                color: Color(0x1400ACB2),
                 blurRadius: 20,
                 offset: Offset(0, 4),
                 spreadRadius: -2,
@@ -524,8 +524,8 @@ class _SafeZoneAlertSettingsScreenState
                   );
                 },
                 style: OutlinedButton.styleFrom(
-                  foregroundColor: const Color(0xFF00BD9D),
-                  side: const BorderSide(width: 2, color: Color(0x4C00BD9D)),
+                  foregroundColor: const Color(0xFF00ACB2),
+                  side: const BorderSide(width: 2, color: Color(0x4C00ACB2)),
                 ),
                 icon: const Icon(Icons.add_circle_outline_rounded, size: 20),
                 label: const Text('Thêm người nhận'),
@@ -549,7 +549,7 @@ class _SafeZoneAlertSettingsScreenState
             height: 48,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(width: 2, color: const Color(0x3300BD9D)),
+              border: Border.all(width: 2, color: const Color(0x3300ACB2)),
             ),
             child: ClipOval(
               child: CustomPaint(
@@ -596,7 +596,7 @@ class _SafeZoneAlertSettingsScreenState
             width: 26,
             height: 26,
             decoration: const ShapeDecoration(
-              color: Color(0xFF00BD9D),
+              color: Color(0xFF00ACB2),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(9999)),
               ),
@@ -637,13 +637,13 @@ class _SafeZoneAlertSettingsScreenState
               'Xem trước thông báo',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Color(0xFF00BD9D),
+                color: Color(0xFF00ACB2),
                 fontSize: ResponsiveHelper.sp(context, 14),
                 fontFamily: 'Lexend',
                 fontWeight: FontWeight.w400,
                 height: 1.43,
                 decoration: TextDecoration.underline,
-                decorationColor: Color(0xFF00BD9D),
+                decorationColor: Color(0xFF00ACB2),
               ),
             ),
           ),

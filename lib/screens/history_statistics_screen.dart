@@ -134,7 +134,7 @@ class _HistoryStatisticsScreenState extends State<HistoryStatisticsScreen> {
                   shape: RoundedRectangleBorder(
                     side: const BorderSide(
                       width: 1,
-                      color: Color(0x3300BD9D),
+                      color: Color(0x3300ACB2),
                     ),
                     borderRadius: BorderRadius.circular(24),
                   ),
@@ -195,7 +195,7 @@ class _HistoryStatisticsScreenState extends State<HistoryStatisticsScreen> {
                 shape: RoundedRectangleBorder(
                   side: const BorderSide(
                     width: 1,
-                    color: Color(0x3300BD9D),
+                    color: Color(0x3300ACB2),
                   ),
                   borderRadius: BorderRadius.circular(24),
                 ),
@@ -457,7 +457,7 @@ class _HistoryStatisticsScreenState extends State<HistoryStatisticsScreen> {
         shape: RoundedRectangleBorder(
           side: const BorderSide(
             width: 1,
-            color: Color(0x1900BD9D),
+            color: Color(0x1900ACB2),
           ),
           borderRadius: BorderRadius.circular(20),
         ),
@@ -529,7 +529,7 @@ class _HistoryStatisticsScreenState extends State<HistoryStatisticsScreen> {
         shape: RoundedRectangleBorder(
           side: const BorderSide(
             width: 1,
-            color: Color(0x1900BD9D),
+            color: Color(0x1900ACB2),
           ),
           borderRadius: BorderRadius.circular(20),
         ),

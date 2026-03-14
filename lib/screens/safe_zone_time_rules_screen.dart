@@ -208,7 +208,7 @@ class _SafeZoneTimeRulesScreenState extends State<SafeZoneTimeRulesScreen> {
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0x3300BD9D)),
+          side: const BorderSide(width: 1, color: Color(0x3300ACB2)),
           borderRadius: BorderRadius.circular(24),
         ),
         shadows: const [
@@ -242,7 +242,7 @@ class _SafeZoneTimeRulesScreenState extends State<SafeZoneTimeRulesScreen> {
                 Text(
                   'Bật để giới hạn thời gian giám sát',
                   style: TextStyle(
-                    color: Color(0xFF00BD9D),
+                    color: Color(0xFF00ACB2),
                     fontSize: ResponsiveHelper.sp(context, 14),
                     fontFamily: 'Lexend',
                     fontWeight: FontWeight.w400,
@@ -266,7 +266,7 @@ class _SafeZoneTimeRulesScreenState extends State<SafeZoneTimeRulesScreen> {
                     height: 24,
                     decoration: BoxDecoration(
                       color: _scheduleEnabled
-                          ? const Color(0xFF00BD9D)
+                          ? const Color(0xFF00ACB2)
                           : const Color(0xFFE5E7EB),
                       borderRadius: BorderRadius.circular(9999),
                     ),
@@ -320,12 +320,12 @@ class _SafeZoneTimeRulesScreenState extends State<SafeZoneTimeRulesScreen> {
                 height: 44,
                 alignment: Alignment.center,
                 decoration: ShapeDecoration(
-                  color: isSelected ? const Color(0xFF00BD9D) : Colors.white,
+                  color: isSelected ? const Color(0xFF00ACB2) : Colors.white,
                   shape: RoundedRectangleBorder(
                     side: isSelected
                         ? BorderSide.none
                         : const BorderSide(
-                            width: 1, color: Color(0x3300BD9D)),
+                            width: 1, color: Color(0x3300ACB2)),
                     borderRadius: BorderRadius.circular(9999),
                   ),
                   shadows: isSelected
@@ -386,13 +386,13 @@ class _SafeZoneTimeRulesScreenState extends State<SafeZoneTimeRulesScreen> {
               onPressed: () => _addTimeSlot(),
               icon: Icon(
                 Icons.add_rounded,
-                color: Color(0xFF00BD9D),
+                color: Color(0xFF00ACB2),
                 size: 18,
               ),
               label: Text(
                 'Thêm khung giờ',
                 style: TextStyle(
-                  color: Color(0xFF00BD9D),
+                  color: Color(0xFF00ACB2),
                   fontSize: ResponsiveHelper.sp(context, 14),
                   fontFamily: 'Lexend',
                   fontWeight: FontWeight.w700,
@@ -418,7 +418,7 @@ class _SafeZoneTimeRulesScreenState extends State<SafeZoneTimeRulesScreen> {
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0x3300BD9D)),
+          side: const BorderSide(width: 1, color: Color(0x3300ACB2)),
           borderRadius: BorderRadius.circular(24),
         ),
         shadows: const [
@@ -441,12 +441,12 @@ class _SafeZoneTimeRulesScreenState extends State<SafeZoneTimeRulesScreen> {
                 width: 36,
                 height: 36,
                 decoration: const BoxDecoration(
-                  color: Color(0x1900BD9D),
+                  color: Color(0x1900ACB2),
                   shape: BoxShape.circle,
                 ),
                 child: const Icon(
                   Icons.access_time_rounded,
-                  color: Color(0xFF00BD9D),
+                  color: Color(0xFF00ACB2),
                   size: 18,
                 ),
               ),
@@ -542,12 +542,12 @@ class _SafeZoneTimeRulesScreenState extends State<SafeZoneTimeRulesScreen> {
                   height: 40,
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   decoration: ShapeDecoration(
-                    color: isSelected ? const Color(0xFF00BD9D) : Colors.white,
+                    color: isSelected ? const Color(0xFF00ACB2) : Colors.white,
                     shape: RoundedRectangleBorder(
                       side: isSelected
                           ? BorderSide.none
                           : const BorderSide(
-                              width: 1, color: Color(0x3300BD9D)),
+                              width: 1, color: Color(0x3300ACB2)),
                       borderRadius: BorderRadius.circular(9999),
                     ),
                     shadows: isSelected
@@ -609,7 +609,7 @@ class _SafeZoneTimeRulesScreenState extends State<SafeZoneTimeRulesScreen> {
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
-              side: const BorderSide(width: 1, color: Color(0x1900BD9D)),
+              side: const BorderSide(width: 1, color: Color(0x1900ACB2)),
               borderRadius: BorderRadius.circular(24),
             ),
             shadows: const [
@@ -651,7 +651,7 @@ class _SafeZoneTimeRulesScreenState extends State<SafeZoneTimeRulesScreen> {
                                     flex: 6,
                                     child: Container(
                                       decoration: BoxDecoration(
-                                        color: const Color(0xCC00BD9D),
+                                        color: const Color(0xCC00ACB2),
                                         borderRadius: BorderRadius.circular(2),
                                       ),
                                     ),

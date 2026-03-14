@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   final routes = [
                     AppRoutes.reminderManagement,
                     AppRoutes.physicalActivity,
-                    AppRoutes.safeZoneManagement,
+                    AppRoutes.safeZoneManagement, // qua màn hình tổng quan vùng an toàn
                     AppRoutes.profile,
                   ];
                   return AppCard(

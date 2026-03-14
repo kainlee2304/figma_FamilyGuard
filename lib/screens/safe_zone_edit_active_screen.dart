@@ -126,12 +126,12 @@ class _SafeZoneEditActiveScreenState extends State<SafeZoneEditActiveScreen> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Icon(Icons.swipe_left_rounded,
-                                  size: 14, color: Color(0xFF00BD9D)),
+                                  size: 14, color: Color(0xFF00ACB2)),
                               SizedBox(width: 4),
                               Text(
                                 'Vuốt để sửa/xóa',
                                 style: TextStyle(
-                                  color: Color(0xFF00BD9D),
+                                  color: Color(0xFF00ACB2),
                                   fontSize: ResponsiveHelper.sp(context, 11),
                                   fontFamily: 'Lexend',
                                   fontWeight: FontWeight.w500,
@@ -200,7 +200,7 @@ class _SafeZoneEditActiveScreenState extends State<SafeZoneEditActiveScreen> {
         child: const Icon(
           Icons.arrow_back_ios_new_rounded,
           size: 18,
-          color: Color(0xFF00BD9D),
+          color: Color(0xFF00ACB2),
         ),
       ),
     );
@@ -219,7 +219,7 @@ class _SafeZoneEditActiveScreenState extends State<SafeZoneEditActiveScreen> {
         ),
         shadows: const [
           BoxShadow(
-            color: Color(0x1400BD9D),
+            color: Color(0x1400ACB2),
             blurRadius: 20,
             offset: Offset(0, 4),
             spreadRadius: -2,
@@ -242,7 +242,7 @@ class _SafeZoneEditActiveScreenState extends State<SafeZoneEditActiveScreen> {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border:
-                        Border.all(width: 2, color: const Color(0x3300BD9D)),
+                        Border.all(width: 2, color: const Color(0x3300ACB2)),
                   ),
                   child: ClipOval(
                     child: CustomPaint(painter: _ProfileAvatarPainter()),
@@ -255,7 +255,7 @@ class _SafeZoneEditActiveScreenState extends State<SafeZoneEditActiveScreen> {
                     width: 16,
                     height: 16,
                     decoration: BoxDecoration(
-                      color: const Color(0xFF00BD9D),
+                      color: const Color(0xFF00ACB2),
                       shape: BoxShape.circle,
                       border: Border.all(width: 2, color: Colors.white),
                     ),
@@ -325,7 +325,7 @@ class _SafeZoneEditActiveScreenState extends State<SafeZoneEditActiveScreen> {
               ),
               child: const Icon(
                 Icons.settings_rounded,
-                color: Color(0xFF00BD9D),
+                color: Color(0xFF00ACB2),
                 size: 20,
               ),
             ),
@@ -390,7 +390,7 @@ class _SafeZoneEditActiveScreenState extends State<SafeZoneEditActiveScreen> {
                       child: Text(
                         radiusLabel,
                         style: TextStyle(
-                          color: Color(0xFF00BD9D),
+                          color: Color(0xFF00ACB2),
                           fontSize: ResponsiveHelper.sp(context, 10),
                           fontFamily: 'Lexend',
                           fontWeight: FontWeight.w700,
@@ -432,7 +432,7 @@ class _SafeZoneEditActiveScreenState extends State<SafeZoneEditActiveScreen> {
                 padding: EdgeInsets.all(2),
                 decoration: BoxDecoration(
                   color: zone.isActive
-                      ? const Color(0xFF00BD9D)
+                      ? const Color(0xFF00ACB2)
                       : const Color(0xFFE5E7EB),
                   borderRadius: BorderRadius.circular(9999),
                 ),
@@ -494,8 +494,8 @@ class _SafeZoneEditActiveScreenState extends State<SafeZoneEditActiveScreen> {
                 CircleMarker(
                   point: center,
                   radius: 20,
-                  color: const Color(0x3300BD9D),
-                  borderColor: const Color(0xFF00BD9D),
+                  color: const Color(0x3300ACB2),
+                  borderColor: const Color(0xFF00ACB2),
                   borderStrokeWidth: 2,
                 ),
               ],
@@ -514,18 +514,18 @@ class _SafeZoneEditActiveScreenState extends State<SafeZoneEditActiveScreen> {
         width: 56,
         height: 56,
         decoration: BoxDecoration(
-          color: const Color(0xFF00BD9D),
+          color: const Color(0xFF00ACB2),
           shape: BoxShape.circle,
           boxShadow: const [
             // fix: thiếu `,` giữa 2 BoxShadow
             BoxShadow(
-              color: Color(0x6600BD9D),
+              color: Color(0x6600ACB2),
               blurRadius: 6,
               offset: Offset(0, 4),
               spreadRadius: -4,
             ),
             BoxShadow(
-              color: Color(0x6600BD9D),
+              color: Color(0x6600ACB2),
               blurRadius: 15,
               offset: Offset(0, 10),
               spreadRadius: -3,
@@ -725,7 +725,7 @@ class _SwipeableCardState extends State<_SwipeableCard>
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: const [
                       BoxShadow(
-                        color: Color(0x1400BD9D),
+                        color: Color(0x1400ACB2),
                         blurRadius: 20,
                         offset: Offset(0, 4),
                         spreadRadius: -2,

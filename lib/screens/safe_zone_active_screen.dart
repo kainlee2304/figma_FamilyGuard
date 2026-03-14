@@ -14,7 +14,11 @@ import '../widgets/common/app_dialog.dart';
 class SafeZoneMemberScreen extends StatefulWidget {
   final Map<String, dynamic> member;
   final VoidCallback? onBackToHome;
-  const SafeZoneMemberScreen({Key? key, required this.member, this.onBackToHome}) : super(key: key);
+  const SafeZoneMemberScreen({
+    Key? key,
+    this.member = const {'name': 'Bà Lan', 'role': 'Người cao tuổi', 'avatar': 'B', 'id': '1'},
+    this.onBackToHome,
+  }) : super(key: key);
 
   @override
   State<SafeZoneMemberScreen> createState() => _SafeZoneMemberScreenState();
@@ -29,9 +33,8 @@ class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
     ScaffoldMessenger.of(context)
       ..hideCurrentSnackBar()
       ..showSnackBar(SnackBar(
-        content:
-            Text(msg, style: const TextStyle(fontFamily: 'Lexend', color: Colors.white)),
-        backgroundColor: const Color(0xFF00BD9D),
+        content: Text(msg, style: const TextStyle(fontFamily: 'Lexend', color: Colors.white)),
+        backgroundColor: const Color(0xFF00ACB2),
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
@@ -225,7 +228,7 @@ class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
                 ],
               ),
               child: const Icon(Icons.arrow_back_ios_new_rounded,
-                  size: 18, color: Color(0xFF00BD9D)),
+                  size: 18, color: Color(0xFF00ACB2)),
             ),
           ),
 
@@ -262,7 +265,7 @@ class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
           border: Border.all(color: const Color(0x4CE6F4F2)),
           boxShadow: const [
             BoxShadow(
-                color: Color(0x1400BD9D),
+                color: Color(0x1400ACB2),
                 blurRadius: 20,
                 offset: Offset(0, 4),
                 spreadRadius: -2),
@@ -289,7 +292,7 @@ class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
                   width: 14,
                   height: 14,
                   decoration: BoxDecoration(
-                    color: const Color(0xFF00BD9D),
+                    color: const Color(0xFF00ACB2),
                     shape: BoxShape.circle,
                     border: Border.all(width: 2, color: Colors.white),
                   ),
@@ -365,14 +368,14 @@ class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: const Color(0x1A00BD9D)),
+          border: Border.all(color: const Color(0x1A00ACB2)),
           boxShadow: const [
             BoxShadow(
                 color: Color(0x0A000000),
                 blurRadius: 8,
                 offset: Offset(0, 2)),
             BoxShadow(
-                color: Color(0x0F00BD9D),
+                color: Color(0x0F00ACB2),
                 blurRadius: 20,
                 offset: Offset(0, 4),
                 spreadRadius: -4),
@@ -412,7 +415,7 @@ class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
                           fontFamily: 'Lexend',
                           fontSize: ResponsiveHelper.sp(context, 10),
                           fontWeight: FontWeight.w600,
-                          color: const Color(0xFF00BD9D),
+                          color: const Color(0xFF00ACB2),
                         )),
                   ),
                 ]),
@@ -441,7 +444,7 @@ class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
               padding: const EdgeInsets.all(2),
               decoration: BoxDecoration(
                 color: zone.isActive
-                    ? const Color(0xFF00BD9D)
+                    ? const Color(0xFF00ACB2)
                     : const Color(0xFFE5E7EB),
                 borderRadius: BorderRadius.circular(9999),
               ),
@@ -501,8 +504,8 @@ class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
               CircleMarker(
                 point: center,
                 radius: 18,
-                color: const Color(0x3300BD9D),
-                borderColor: const Color(0xFF00BD9D),
+                color: const Color(0x3300ACB2),
+                borderColor: const Color(0xFF00ACB2),
                 borderStrokeWidth: 2,
               ),
             ]),
@@ -520,16 +523,16 @@ class _SafeZoneMemberScreenState extends State<SafeZoneMemberScreen> {
         width: 56,
         height: 56,
         decoration: const BoxDecoration(
-          color: Color(0xFF00BD9D),
+          color: Color(0xFF00ACB2),
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
-                color: Color(0x6600BD9D),
+                color: Color(0x6600ACB2),
                 blurRadius: 6,
                 offset: Offset(0, 4),
                 spreadRadius: -4),
             BoxShadow(
-                color: Color(0x6600BD9D),
+                color: Color(0x6600ACB2),
                 blurRadius: 15,
                 offset: Offset(0, 10),
                 spreadRadius: -3),
@@ -726,7 +729,7 @@ class _AddZoneSheetState extends State<_AddZoneSheet> {
       ..showSnackBar(SnackBar(
         content:
             Text(msg, style: const TextStyle(fontFamily: 'Lexend', color: Colors.white)),
-        backgroundColor: const Color(0xFF00BD9D),
+        backgroundColor: const Color(0xFF00ACB2),
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
@@ -766,7 +769,7 @@ class _AddZoneSheetState extends State<_AddZoneSheet> {
                 shape: BoxShape.circle,
               ),
               child: const Icon(Icons.add_location_rounded,
-                  color: Color(0xFF00BD9D), size: 20),
+                  color: Color(0xFF00ACB2), size: 20),
             ),
             const SizedBox(width: 10),
             const Text('Thêm vùng mới',
@@ -827,8 +830,8 @@ class _AddZoneSheetState extends State<_AddZoneSheet> {
                           CircleMarker(
                             point: _selectedPoint!,
                             radius: _mapRadius(),
-                            color: const Color(0x2200BD9D),
-                            borderColor: const Color(0xFF00BD9D),
+                            color: const Color(0x2200ACB2),
+                            borderColor: const Color(0xFF00ACB2),
                             borderStrokeWidth: 2,
                           ),
                         ]),
@@ -838,7 +841,7 @@ class _AddZoneSheetState extends State<_AddZoneSheet> {
                             width: 32,
                             height: 32,
                             child: const Icon(Icons.location_pin,
-                                color: Color(0xFF00BD9D), size: 32),
+                                color: Color(0xFF00ACB2), size: 32),
                           ),
                         ]),
                       ],
@@ -860,10 +863,10 @@ class _AddZoneSheetState extends State<_AddZoneSheet> {
                 _label('Bán kính: ${_radius >= 1000 ? '${(_radius / 1000).toStringAsFixed(1)}km' : '${_radius.round()}m'}'),
                 SliderTheme(
                   data: SliderThemeData(
-                    activeTrackColor: const Color(0xFF00BD9D),
-                    inactiveTrackColor: const Color(0xFF00BD9D).withAlpha(30),
-                    thumbColor: const Color(0xFF00BD9D),
-                    overlayColor: const Color(0xFF00BD9D).withAlpha(30),
+                    activeTrackColor: const Color(0xFF00ACB2),
+                    inactiveTrackColor: const Color(0xFF00ACB2).withAlpha(30),
+                    thumbColor: const Color(0xFF00ACB2),
+                    overlayColor: const Color(0xFF00ACB2).withAlpha(30),
                     trackHeight: 4,
                     thumbShape:
                         const RoundSliderThumbShape(enabledThumbRadius: 8),
@@ -934,7 +937,7 @@ class _AddZoneSheetState extends State<_AddZoneSheet> {
                 child: ElevatedButton(
                   onPressed: _save,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF00BD9D),
+                    backgroundColor: const Color(0xFF00ACB2),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(14)),
                     elevation: 0,
@@ -1012,7 +1015,7 @@ class _AddZoneSheetState extends State<_AddZoneSheet> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(color: Color(0xFF00BD9D), width: 1.5),
+          borderSide: const BorderSide(color: Color(0xFF00ACB2), width: 1.5),
         ),
       ),
     );
@@ -1066,7 +1069,7 @@ class _EditZoneSheetState extends State<_EditZoneSheet> {
       ..showSnackBar(SnackBar(
         content: Text(msg,
             style: const TextStyle(fontFamily: 'Lexend', color: Colors.white)),
-        backgroundColor: const Color(0xFF00BD9D),
+        backgroundColor: const Color(0xFF00ACB2),
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
@@ -1161,8 +1164,8 @@ class _EditZoneSheetState extends State<_EditZoneSheet> {
                         CircleMarker(
                           point: _selectedPoint,
                           radius: _mapRadius(),
-                          color: const Color(0x2200BD9D),
-                          borderColor: const Color(0xFF00BD9D),
+                          color: const Color(0x2200ACB2),
+                          borderColor: const Color(0xFF00ACB2),
                           borderStrokeWidth: 2,
                         ),
                       ]),
@@ -1171,7 +1174,7 @@ class _EditZoneSheetState extends State<_EditZoneSheet> {
                           point: _selectedPoint,
                           width: 32, height: 32,
                           child: const Icon(Icons.location_pin,
-                              color: Color(0xFF00BD9D), size: 32),
+                              color: Color(0xFF00ACB2), size: 32),
                         ),
                       ]),
                     ],
@@ -1182,10 +1185,10 @@ class _EditZoneSheetState extends State<_EditZoneSheet> {
                 _label('Bán kính: ${_radius >= 1000 ? '${(_radius / 1000).toStringAsFixed(1)}km' : '${_radius.round()}m'}'),
                 SliderTheme(
                   data: SliderThemeData(
-                    activeTrackColor: const Color(0xFF00BD9D),
-                    inactiveTrackColor: const Color(0xFF00BD9D).withAlpha(30),
-                    thumbColor: const Color(0xFF00BD9D),
-                    overlayColor: const Color(0xFF00BD9D).withAlpha(30),
+                    activeTrackColor: const Color(0xFF00ACB2),
+                    inactiveTrackColor: const Color(0xFF00ACB2).withAlpha(30),
+                    thumbColor: const Color(0xFF00ACB2),
+                    overlayColor: const Color(0xFF00ACB2).withAlpha(30),
                     trackHeight: 4,
                     thumbShape:
                         const RoundSliderThumbShape(enabledThumbRadius: 8),
@@ -1303,7 +1306,7 @@ class _EditZoneSheetState extends State<_EditZoneSheet> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(color: Color(0xFF00BD9D), width: 1.5),
+          borderSide: const BorderSide(color: Color(0xFF00ACB2), width: 1.5),
         ),
       ),
     );
@@ -1398,7 +1401,7 @@ class _SafeZoneDetailRedesignedState extends State<SafeZoneDetailRedesigned> {
                     ],
                   ),
                   child: const Icon(Icons.arrow_back_ios_new_rounded,
-                      size: 18, color: Color(0xFF00BD9D)),
+                      size: 18, color: Color(0xFF00ACB2)),
                 ),
               ),
               const SizedBox(width: 12),
@@ -1425,7 +1428,7 @@ class _SafeZoneDetailRedesignedState extends State<SafeZoneDetailRedesigned> {
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(Icons.edit_rounded,
-                      size: 18, color: Color(0xFF00BD9D)),
+                      size: 18, color: Color(0xFF00ACB2)),
                 ),
               ),
             ]),
@@ -1452,8 +1455,8 @@ class _SafeZoneDetailRedesignedState extends State<SafeZoneDetailRedesigned> {
                 CircleMarker(
                   point: center,
                   radius: (zone.radius / 10).clamp(15.0, 120.0),
-                  color: const Color(0x2200BD9D),
-                  borderColor: const Color(0xFF00BD9D),
+                  color: const Color(0x2200ACB2),
+                  borderColor: const Color(0xFF00ACB2),
                   borderStrokeWidth: 2,
                 ),
               ]),
@@ -1464,12 +1467,12 @@ class _SafeZoneDetailRedesignedState extends State<SafeZoneDetailRedesigned> {
                   height: 36,
                   child: Container(
                     decoration: BoxDecoration(
-                      color: const Color(0xFF00BD9D),
+                      color: const Color(0xFF00ACB2),
                       shape: BoxShape.circle,
                       border: Border.all(width: 3, color: Colors.white),
                       boxShadow: const [
                         BoxShadow(
-                            color: Color(0x3300BD9D),
+                            color: Color(0x3300ACB2),
                             blurRadius: 8,
                             offset: Offset(0, 2)),
                       ],
@@ -1493,7 +1496,7 @@ class _SafeZoneDetailRedesignedState extends State<SafeZoneDetailRedesigned> {
               borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
               boxShadow: [
                 BoxShadow(
-                    color: Color(0x1400BD9D),
+                    color: Color(0x1400ACB2),
                     blurRadius: 20,
                     offset: Offset(0, -4)),
               ],
@@ -1561,7 +1564,7 @@ class _SafeZoneDetailRedesignedState extends State<SafeZoneDetailRedesigned> {
                                 fontFamily: 'Lexend',
                                 fontSize: 12,
                                 fontWeight: FontWeight.w500,
-                                color: Color(0xFF00BD9D),
+                                color: Color(0xFF00ACB2),
                               )),
                         );
                       }).toList(),
@@ -1600,7 +1603,7 @@ class _SafeZoneDetailRedesignedState extends State<SafeZoneDetailRedesigned> {
           color: AppColors.kPrimaryLight,
           shape: BoxShape.circle,
         ),
-        child: Icon(icon, size: 16, color: const Color(0xFF00BD9D)),
+        child: Icon(icon, size: 16, color: const Color(0xFF00ACB2)),
       ),
       const SizedBox(width: 12),
       Expanded(

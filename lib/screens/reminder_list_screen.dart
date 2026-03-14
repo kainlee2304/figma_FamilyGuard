@@ -98,7 +98,7 @@ class _ReminderListScreenState extends State<ReminderListScreen> {
             child: const Icon(
               Icons.arrow_back_ios_new_rounded,
               size: 18,
-              color: Color(0xFF00BD9D),
+              color: Color(0xFF00ACB2),
             ),
           ),
         ),
@@ -125,13 +125,13 @@ class _ReminderListScreenState extends State<ReminderListScreen> {
             shape: RoundedRectangleBorder(
               side: BorderSide(
                 width: 1,
-                color: const Color(0x2600BD9D),
+                color: const Color(0x2600ACB2),
               ),
               borderRadius: BorderRadius.circular(24),
             ),
             shadows: [
               BoxShadow(
-                color: Color(0x1400BD9D),
+                color: Color(0x1400ACB2),
                 blurRadius: 20,
                 offset: Offset(0, 4),
                 spreadRadius: -2,
@@ -155,7 +155,7 @@ class _ReminderListScreenState extends State<ReminderListScreen> {
                       shape: RoundedRectangleBorder(
                         side: BorderSide(
                           width: 2,
-                          color: const Color(0x3300BD9D),
+                          color: const Color(0x3300ACB2),
                         ),
                         borderRadius: BorderRadius.circular(9999),
                       ),
@@ -201,13 +201,13 @@ class _ReminderListScreenState extends State<ReminderListScreen> {
                         Icon(
                           Icons.home,
                           size: 14,
-                          color: const Color(0xFF00BD9D),
+                          color: const Color(0xFF00ACB2),
                         ),
                         const SizedBox(width: 4),
                         Text(
                           'Đang ở nhà',
                           style: TextStyle(
-                            color: const Color(0xFF00BD9D),
+                            color: const Color(0xFF00ACB2),
                             fontSize: 14,
                             fontFamily: 'Lexend',
                             fontWeight: FontWeight.w500,
@@ -323,7 +323,7 @@ class _ReminderListScreenState extends State<ReminderListScreen> {
     if (bgColor == const Color(0x33FF85A1)) return const Color(0xFFFF85A1);
     if (bgColor == const Color(0x33FFD166)) return const Color(0xFFFFD166);
     if (bgColor == const Color(0x33118AB2)) return const Color(0xFF118AB2);
-    return const Color(0xFF00BD9D);
+    return const Color(0xFF00ACB2);
   }
 
   /// Individual reminder card
@@ -345,13 +345,13 @@ class _ReminderListScreenState extends State<ReminderListScreen> {
           shape: RoundedRectangleBorder(
             side: const BorderSide(
               width: 1,
-              color: Color(0x2600BD9D),
+              color: Color(0x2600ACB2),
             ),
             borderRadius: BorderRadius.circular(24),
           ),
           shadows: const [
             BoxShadow(
-              color: Color(0x1400BD9D),
+              color: Color(0x1400ACB2),
               blurRadius: 20,
               offset: Offset(0, 4),
               spreadRadius: -2,
@@ -436,7 +436,7 @@ class _ReminderListScreenState extends State<ReminderListScreen> {
         bottom: 2,
       ),
       decoration: ShapeDecoration(
-        color: isActive ? const Color(0xFF00BD9D) : const Color(0xFFE2E8F0),
+        color: isActive ? const Color(0xFF00ACB2) : const Color(0xFFE2E8F0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(9999),
         ),
@@ -469,8 +469,8 @@ class _ReminderListScreenState extends State<ReminderListScreen> {
         Navigator.pushNamed(context, AppRoutes.createReminder);
       },
       style: OutlinedButton.styleFrom(
-        foregroundColor: const Color(0xFF00BD9D),
-        side: const BorderSide(width: 2, color: Color(0x4C00BD9D)),
+        foregroundColor: const Color(0xFF00ACB2),
+        side: const BorderSide(width: 2, color: Color(0x4C00ACB2)),
       ),
       icon: const Icon(Icons.add_circle_outline, size: 24),
       label: const Text('Thêm nhắc nhở mới'),
@@ -509,7 +509,7 @@ class _ReminderListScreenState extends State<ReminderListScreen> {
             ),
             const SizedBox(height: 8),
             ListTile(
-              leading: const Icon(Icons.edit_outlined, color: Color(0xFF00BD9D)),
+              leading: const Icon(Icons.edit_outlined, color: Color(0xFF00ACB2)),
               title: const Text(
                 'Chỉnh sửa lịch nhắc',
                 style: TextStyle(fontFamily: 'Lexend', fontWeight: FontWeight.w500),

@@ -146,7 +146,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border(
-          bottom: BorderSide(color: const Color(0x1900BD9D), width: 1),
+          bottom: BorderSide(color: const Color(0x1900ACB2), width: 1),
         ),
       ),
       child: SafeArea(
@@ -233,13 +233,13 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
                         controller: _titleController,
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
-                        color: const Color(0xFF00BD9D),
+                        color: const Color(0xFF00ACB2),
                         hint: 'Tên lịch nhắc...',
                       )
                     : Text(
                         _titleController.text,
                         style: TextStyle(
-                          color: const Color(0xFF00BD9D),
+                          color: const Color(0xFF00ACB2),
                           fontSize: ResponsiveHelper.sp(context, 18),
                           fontFamily: 'Lexend',
                           fontWeight: FontWeight.w700,
@@ -299,7 +299,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Color(0xFF00BD9D), width: 1.5),
+          borderSide: const BorderSide(color: Color(0xFF00ACB2), width: 1.5),
         ),
         hintText: hint,
         hintStyle: TextStyle(
@@ -401,7 +401,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: selected
-                        ? const Color(0xFF00BD9D)
+                        ? const Color(0xFF00ACB2)
                         : const Color(0xFF94A3B8),
                     fontSize: ResponsiveHelper.sp(context, 13),
                     fontFamily: 'Lexend',
@@ -429,7 +429,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
             decoration: BoxDecoration(
               color: AppColors.background,
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: const Color(0x1900BD9D)),
+              border: Border.all(color: const Color(0x1900ACB2)),
             ),
             child: Row(
               children: [
@@ -439,11 +439,11 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
                     width: 44,
                     height: 44,
                     decoration: BoxDecoration(
-                      color: const Color(0xFF00BD9D),
+                      color: const Color(0xFF00ACB2),
                       borderRadius: BorderRadius.circular(14),
                       boxShadow: [
                         BoxShadow(
-                          color: const Color(0x4C00BD9D),
+                          color: const Color(0x4C00ACB2),
                           blurRadius: 10,
                           offset: const Offset(0, 4),
                         ),
@@ -462,7 +462,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
                 Text(
                   '0:12',
                   style: TextStyle(
-                    color: const Color(0xFF00BD9D),
+                    color: const Color(0xFF00ACB2),
                     fontSize: ResponsiveHelper.sp(context, 12),
                     fontFamily: 'Lexend',
                     fontWeight: FontWeight.w600,
@@ -513,7 +513,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
                     decoration: BoxDecoration(
                       color: _isRecording
                           ? const Color(0xFFEF4444)
-                          : const Color(0xFF00BD9D),
+                          : const Color(0xFF00ACB2),
                       borderRadius: BorderRadius.circular(3),
                     ),
                   ),
@@ -553,7 +553,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
               border: Border.all(
                 color: _isRecording
                     ? const Color(0xFFEF4444)
-                    : const Color(0x4D00BD9D),
+                    : const Color(0x4D00ACB2),
               ),
               borderRadius: BorderRadius.circular(12),
             ),
@@ -636,7 +636,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
       decoration: BoxDecoration(
         color: AppColors.background,
         borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: const Color(0x3300BD9D)),
+        border: Border.all(color: const Color(0x3300ACB2)),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -647,7 +647,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(color: const Color(0x3300BD9D), width: 1.5),
+              border: Border.all(color: const Color(0x3300ACB2), width: 1.5),
             ),
             child: Image.network(r.imageUrl, fit: BoxFit.cover),
           ),
@@ -713,7 +713,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
                   _isActive ? 'Đang bật' : 'Đã tắt',
                   style: TextStyle(
                     color: _isActive
-                        ? const Color(0xFF00BD9D)
+                        ? const Color(0xFF00ACB2)
                         : const Color(0xFF94A3B8),
                     fontSize: ResponsiveHelper.sp(context, 12),
                     fontFamily: 'Lexend',
@@ -738,7 +738,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
       width: 52,
       height: 28,
       decoration: BoxDecoration(
-        color: _isActive ? const Color(0xFF00BD9D) : const Color(0xFFCBD5E1),
+        color: _isActive ? const Color(0xFF00ACB2) : const Color(0xFFCBD5E1),
         borderRadius: BorderRadius.circular(14),
       ),
       child: Stack(
@@ -775,7 +775,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
       style: OutlinedButton.styleFrom(
         foregroundColor: AppColors.primary,
         backgroundColor: AppColors.background,
-        side: BorderSide(color: const Color(0x3300BD9D)),
+        side: BorderSide(color: const Color(0x3300ACB2)),
       ),
       icon: const Icon(Icons.visibility_outlined, size: 20),
       label: const Text('Xem trước thông báo'),
@@ -789,7 +789,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border(
-          top: BorderSide(color: const Color(0x1900BD9D), width: 1),
+          top: BorderSide(color: const Color(0x1900ACB2), width: 1),
         ),
       ),
       child: SafeArea(
@@ -865,7 +865,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
       width: 40,
       height: 40,
       decoration: BoxDecoration(
-        color: const Color(0x1900BD9D),
+        color: const Color(0x1900ACB2),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Icon(icon, color: AppColors.primary, size: 22),
@@ -907,7 +907,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('Đã lưu thành công'),
-        backgroundColor: Color(0xFF00BD9D),
+        backgroundColor: Color(0xFF00ACB2),
         behavior: SnackBarBehavior.floating,
       ),
     );
@@ -964,7 +964,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
       builder: (context, child) {
         return Theme(
           data: Theme.of(context).copyWith(
-            colorScheme: ColorScheme.light(primary: const Color(0xFF00BD9D)),
+            colorScheme: ColorScheme.light(primary: const Color(0xFF00ACB2)),
           ),
           child: child!,
         );
@@ -985,7 +985,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Đã thêm tất cả thành viên'),
-          backgroundColor: Color(0xFF00BD9D),
+          backgroundColor: Color(0xFF00ACB2),
           behavior: SnackBarBehavior.floating,
         ),
       );
@@ -1048,7 +1048,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
-                                  color: const Color(0x3300BD9D), width: 2),
+                                  color: const Color(0x3300ACB2), width: 2),
                             ),
                             child: Image.network(member.imageUrl,
                                 fit: BoxFit.cover),
@@ -1125,7 +1125,7 @@ class _ReminderDetailScreenState extends State<ReminderDetailScreen>
                           height: 38,
                           decoration: BoxDecoration(
                             gradient: const LinearGradient(
-                              colors: [Color(0xFF00BD9D), Color(0xFF00A389)],
+                              colors: [Color(0xFF00ACB2), Color(0xFF00A389)],
                             ),
                             borderRadius: BorderRadius.circular(11),
                           ),
@@ -1229,7 +1229,7 @@ class _CardWrapper extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: const Color(0x1A00BD9D)),
+        border: Border.all(color: const Color(0x1A00ACB2)),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.03),

@@ -200,7 +200,7 @@ class SafeZoneAlertCard extends StatelessWidget {
         decoration: ShapeDecoration(
           color: AppColors.background,
           shape: RoundedRectangleBorder(
-            side: const BorderSide(width: 1, color: Color(0x1900BD9D)),
+            side: const BorderSide(width: 1, color: Color(0x1900ACB2)),
             borderRadius: BorderRadius.circular(24),
           ),
         ),
@@ -346,8 +346,8 @@ class SafeZoneAlertCard extends StatelessWidget {
                       CircleMarker(
                         point: center,
                         radius: (radius / 20).clamp(12.0, 60.0),
-                        color: const Color(0x2200BD9D),
-                        borderColor: const Color(0xFF00BD9D),
+                        color: const Color(0x2200ACB2),
+                        borderColor: const Color(0xFF00ACB2),
                         borderStrokeWidth: 2,
                       ),
                     ]),

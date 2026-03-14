@@ -315,7 +315,7 @@ class _HoverBottomNavOverlayState extends State<_HoverBottomNavOverlay>
         borderRadius: BorderRadius.circular(9999),
         boxShadow: const [
           BoxShadow(
-            color: Color(0x3300ADB2),
+            color: Color(0x3300ACB2),
             blurRadius: 50,
             offset: Offset(0, 25),
             spreadRadius: -12,

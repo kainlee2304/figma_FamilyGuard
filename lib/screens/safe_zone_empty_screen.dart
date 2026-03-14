@@ -23,7 +23,7 @@ class SafeZoneEmptyScreen extends StatelessWidget {
             decoration: const ShapeDecoration(
               color: Colors.white,
               shape: RoundedRectangleBorder(
-                side: BorderSide(width: 1, color: Color(0x1900BD9D)),
+                side: BorderSide(width: 1, color: Color(0x1900ACB2)),
               ),
             ),
             child: Row(
@@ -84,7 +84,7 @@ class SafeZoneEmptyScreen extends StatelessWidget {
                         gradient: const RadialGradient(
                           center: Alignment(0.50, 0.50),
                           radius: 0.71,
-                          colors: [Color(0x1900BD9D), Color(0x0000BD9D)],
+                          colors: [Color(0x1900ACB2), Color(0x0000ACB2)],
                         ),
                         borderRadius: BorderRadius.circular(9999),
                       ),
@@ -102,7 +102,7 @@ class SafeZoneEmptyScreen extends StatelessWidget {
                                 shape: RoundedRectangleBorder(
                                   side: const BorderSide(
                                     width: 1,
-                                    color: Color(0x3300BD9D),
+                                    color: Color(0x3300ACB2),
                                   ),
                                   borderRadius: BorderRadius.circular(24),
                                 ),
@@ -128,12 +128,12 @@ class SafeZoneEmptyScreen extends StatelessWidget {
                                   Container(
                                     padding: const EdgeInsets.all(28),
                                     decoration: BoxDecoration(
-                                      color: const Color(0x3300BD9D),
+                                      color: const Color(0x3300ACB2),
                                       shape: BoxShape.circle,
                                     ),
                                     child: const Icon(
                                       Icons.location_on_rounded,
-                                      color: Color(0xFF00BD9D),
+                                      color: Color(0xFF00ACB2),
                                       size: 48,
                                     ),
                                   ),
@@ -145,7 +145,7 @@ class SafeZoneEmptyScreen extends StatelessWidget {
                                       width: 40,
                                       height: 40,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFF00BD9D),
+                                        color: const Color(0xFF00ACB2),
                                         shape: BoxShape.circle,
                                         border: Border.all(
                                           color: Colors.white,
@@ -185,7 +185,7 @@ class SafeZoneEmptyScreen extends StatelessWidget {
                                 width: 16,
                                 height: 16,
                                 decoration: BoxDecoration(
-                                  color: const Color(0x4C00BD9D),
+                                  color: const Color(0x4C00ACB2),
                                   shape: BoxShape.circle,
                                 ),
                               ),
@@ -198,7 +198,7 @@ class SafeZoneEmptyScreen extends StatelessWidget {
                                 width: 24,
                                 height: 24,
                                 decoration: BoxDecoration(
-                                  color: const Color(0x3300BD9D),
+                                  color: const Color(0x3300ACB2),
                                   shape: BoxShape.circle,
                                 ),
                               ),
@@ -215,7 +215,7 @@ class SafeZoneEmptyScreen extends StatelessWidget {
                       'Chưa có vùng an toàn nào',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(0xFF00BD9D),
+                        color: Color(0xFF00ACB2),
                         fontSize: 24,
                         fontFamily: 'Lexend',
                         fontWeight: FontWeight.w700,

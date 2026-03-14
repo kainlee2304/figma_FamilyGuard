@@ -78,7 +78,7 @@ class _SafeZoneDeleteConfirmScreenState
           duration: const Duration(seconds: 4),
           action: SnackBarAction(
             label: 'HOÀN TÁC',
-            textColor: const Color(0xFF00BD9D),
+            textColor: const Color(0xFF00ACB2),
             onPressed: () {
               if (zone != null) service.addZone(zone);
             },
@@ -152,8 +152,8 @@ class _SafeZoneDeleteConfirmScreenState
                         CircleMarker(
                           point: center,
                           radius: radius / 10,
-                          color: const Color(0x4C00BD9D),
-                          borderColor: const Color(0xFF00BD9D),
+                          color: const Color(0x4C00ACB2),
+                          borderColor: const Color(0xFF00ACB2),
                           borderStrokeWidth: 2,
                         ),
                       ],
@@ -172,10 +172,10 @@ class _SafeZoneDeleteConfirmScreenState
                       width: 256,
                       height: 256,
                       decoration: ShapeDecoration(
-                        color: const Color(0x4C00BD9D),
+                        color: const Color(0x4C00ACB2),
                         shape: RoundedRectangleBorder(
                           side: const BorderSide(
-                              width: 2, color: Color(0xFF00BD9D)),
+                              width: 2, color: Color(0xFF00ACB2)),
                           borderRadius: BorderRadius.circular(9999),
                         ),
                       ),
@@ -188,7 +188,7 @@ class _SafeZoneDeleteConfirmScreenState
                           width: 36,
                           height: 36,
                           decoration: const BoxDecoration(
-                            color: Color(0xFF00BD9D),
+                            color: Color(0xFF00ACB2),
                             shape: BoxShape.circle,
                           ),
                           child: const Icon(
@@ -197,7 +197,7 @@ class _SafeZoneDeleteConfirmScreenState
                             size: 20,
                           ),
                         ),
-                        Container(width: 4, height: 8, color: const Color(0xFF00BD9D)),
+                        Container(width: 4, height: 8, color: const Color(0xFF00ACB2)),
                       ],
                     ),
                     // Badge bán kính
@@ -210,7 +210,7 @@ class _SafeZoneDeleteConfirmScreenState
                           color: Colors.white.withValues(alpha: 0.90),
                           shape: RoundedRectangleBorder(
                             side: const BorderSide(
-                                width: 1, color: Color(0x3300BD9D)),
+                                width: 1, color: Color(0x3300ACB2)),
                             borderRadius: BorderRadius.circular(9999),
                           ),
                           shadows: const [
@@ -225,7 +225,7 @@ class _SafeZoneDeleteConfirmScreenState
                         child: const Text(
                           '500m',
                           style: TextStyle(
-                            color: Color(0xFF00BD9D),
+                            color: Color(0xFF00ACB2),
                             fontSize: 12,
                             fontFamily: 'Lexend',
                             fontWeight: FontWeight.w700,
@@ -245,7 +245,7 @@ class _SafeZoneDeleteConfirmScreenState
                           color: Colors.white,
                           shape: BoxShape.circle,
                           border: Border.all(
-                              width: 2, color: const Color(0xFF00BD9D)),
+                              width: 2, color: const Color(0xFF00ACB2)),
                           boxShadow: const [
                             BoxShadow(
                               color: Color(0x19000000),
@@ -262,7 +262,7 @@ class _SafeZoneDeleteConfirmScreenState
                           ],
                         ),
                         child: const Icon(Icons.open_with_rounded,
-                            size: 16, color: Color(0xFF00BD9D)),
+                            size: 16, color: Color(0xFF00ACB2)),
                       ),
                     ),
                   ],
@@ -295,7 +295,7 @@ class _SafeZoneDeleteConfirmScreenState
                     ],
                   ),
                   child: const Icon(Icons.my_location_rounded,
-                      color: Color(0xFF00BD9D), size: 22),
+                      color: Color(0xFF00ACB2), size: 22),
                 ),
               ),
 
@@ -413,7 +413,7 @@ class _SafeZoneDeleteConfirmScreenState
                         child: const Text(
                           'Lưu',
                           style: TextStyle(
-                            color: Color(0xFF00BD9D),
+                            color: Color(0xFF00ACB2),
                             fontSize: 16,
                             fontFamily: 'Lexend',
                             fontWeight: FontWeight.w700,

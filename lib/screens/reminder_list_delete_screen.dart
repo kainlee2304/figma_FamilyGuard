@@ -39,7 +39,7 @@ class _ReminderListDeleteScreenState extends State<ReminderListDeleteScreen> {
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded,
-              color: Color(0xFF00BD9D), size: 20),
+              color: Color(0xFF00ACB2), size: 20),
           onPressed: () => Navigator.maybePop(context),
         ),
         title: Text(
@@ -93,7 +93,7 @@ class _ReminderListDeleteScreenState extends State<ReminderListDeleteScreen> {
         duration: const Duration(seconds: 3),
         action: SnackBarAction(
           label: 'HOÀN TÁC',
-          textColor: const Color(0xFF00BD9D),
+          textColor: const Color(0xFF00ACB2),
           onPressed: () {
             // TODO: restore deleted reminder
           },
@@ -131,13 +131,13 @@ class _ReminderListDeleteScreenState extends State<ReminderListDeleteScreen> {
         shape: RoundedRectangleBorder(
           side: const BorderSide(
             width: 1,
-            color: Color(0x2600BD9D),
+            color: Color(0x2600ACB2),
           ),
           borderRadius: BorderRadius.circular(24),
         ),
         shadows: const [
           BoxShadow(
-            color: Color(0x1400BD9D),
+            color: Color(0x1400ACB2),
             blurRadius: 20,
             offset: Offset(0, 4),
             spreadRadius: -2,
@@ -173,7 +173,7 @@ class _ReminderListDeleteScreenState extends State<ReminderListDeleteScreen> {
                     Text(
                       'Đang ở nhà',
                       style: TextStyle(
-                        color: Color(0xFF00BD9D),
+                        color: Color(0xFF00ACB2),
                         fontSize: ResponsiveHelper.sp(context, 14),
                         fontFamily: 'Lexend',
                         fontWeight: FontWeight.w500,
@@ -250,7 +250,7 @@ class _ReminderListDeleteScreenState extends State<ReminderListDeleteScreen> {
             shape: RoundedRectangleBorder(
               side: const BorderSide(
                 width: 2,
-                color: Color(0x3300BD9D),
+                color: Color(0x3300ACB2),
               ),
               borderRadius: BorderRadius.circular(9999),
             ),
@@ -323,13 +323,13 @@ class _ReminderListDeleteScreenState extends State<ReminderListDeleteScreen> {
         shape: RoundedRectangleBorder(
           side: const BorderSide(
             width: 1,
-            color: Color(0x2600BD9D),
+            color: Color(0x2600ACB2),
           ),
           borderRadius: BorderRadius.circular(24),
         ),
         shadows: const [
           BoxShadow(
-            color: Color(0x1400BD9D),
+            color: Color(0x1400ACB2),
             blurRadius: 20,
             offset: Offset(0, 4),
             spreadRadius: -2,
@@ -410,7 +410,7 @@ class _ReminderListDeleteScreenState extends State<ReminderListDeleteScreen> {
         ),
         decoration: ShapeDecoration(
           color: reminder.isActive
-              ? const Color(0xFF00BD9D)
+              ? const Color(0xFF00ACB2)
               : const Color(0xFFE2E8F0),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(9999),
@@ -444,8 +444,8 @@ class _ReminderListDeleteScreenState extends State<ReminderListDeleteScreen> {
         Navigator.pushNamed(context, '/create-reminder');
       },
       style: OutlinedButton.styleFrom(
-        foregroundColor: const Color(0xFF00BD9D),
-        side: const BorderSide(width: 2, color: Color(0x4C00BD9D)),
+        foregroundColor: const Color(0xFF00ACB2),
+        side: const BorderSide(width: 2, color: Color(0x4C00ACB2)),
       ),
       icon: const Icon(Icons.add, size: 24),
       label: const Text('Thêm nhắc nhở mới'),

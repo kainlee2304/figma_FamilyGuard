@@ -24,7 +24,7 @@ class SafeZoneSelectMemberScreen extends StatelessWidget {
             colors: [AppColors.kPrimaryLight, AppColors.background],
           ),
           shape: RoundedRectangleBorder(
-            side: BorderSide(width: 1, color: Color(0x1900BD9D)),
+            side: BorderSide(width: 1, color: Color(0x1900ACB2)),
           ),
         ),
         child: SafeArea(
@@ -133,8 +133,8 @@ class SafeZoneSelectMemberScreen extends StatelessWidget {
                           );
                         },
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: const Color(0xFF00BD9D),
-                          side: const BorderSide(width: 2, color: Color(0x4C00BD9D)),
+                          foregroundColor: const Color(0xFF00ACB2),
+                          side: const BorderSide(width: 2, color: Color(0x4C00ACB2)),
                         ),
                         icon: const Icon(Icons.add_circle_outline_rounded, size: 20),
                         label: const Text('Thêm thành viên mới'),
@@ -183,7 +183,7 @@ class _MemberSelectCard extends StatelessWidget {
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0x1900BD9D)),
+          side: const BorderSide(width: 1, color: Color(0x1900ACB2)),
           borderRadius: BorderRadius.circular(20),
         ),
         shadows: const [
@@ -309,7 +309,7 @@ class _MemberSelectCard extends StatelessWidget {
           // Nút mũi tên chọn
           const Icon(
             Icons.chevron_right_rounded,
-            color: Color(0xFF00BD9D),
+            color: Color(0xFF00ACB2),
             size: 24,
           ),
         ],

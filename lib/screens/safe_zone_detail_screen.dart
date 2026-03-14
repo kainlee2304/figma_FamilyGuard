@@ -77,7 +77,7 @@ class _SafeZoneDetailScreenState extends State<SafeZoneDetailScreen> {
                   _buildTextField(
                     initialValue: 'Trường Tiểu học Kim Đồng',
                     icon: Icons.edit_rounded,
-                    iconColor: const Color(0xFF00BD9D),
+                    iconColor: const Color(0xFF00ACB2),
                     readOnly: false,
                     textColor: const Color(0xFF0C1D1A),
                     bgColor: Colors.white,
@@ -111,7 +111,7 @@ class _SafeZoneDetailScreenState extends State<SafeZoneDetailScreen> {
                     child: Text(
                       'Tùy chỉnh',
                       style: TextStyle(
-                        color: Color(0xFF00BD9D),
+                        color: Color(0xFF00ACB2),
                         fontSize: ResponsiveHelper.sp(context, 14),
                         fontFamily: 'Lexend',
                         fontWeight: FontWeight.w500,
@@ -271,21 +271,21 @@ class _SafeZoneDetailScreenState extends State<SafeZoneDetailScreen> {
               padding: EdgeInsets.symmetric(horizontal: 20),
               decoration: ShapeDecoration(
                 color: isSelected
-                    ? const Color(0xFF00BD9D)
-                    : const Color(0x1900BD9D),
+                    ? const Color(0xFF00ACB2)
+                    : const Color(0x1900ACB2),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(9999),
                 ),
                 shadows: isSelected
                     ? const [
                         BoxShadow(
-                          color: Color(0x4C00BD9D),
+                          color: Color(0x4C00ACB2),
                           blurRadius: 6,
                           offset: Offset(0, 4),
                           spreadRadius: -4,
                         ),
                         BoxShadow(
-                          color: Color(0x4C00BD9D),
+                          color: Color(0x4C00ACB2),
                           blurRadius: 15,
                           offset: Offset(0, 10),
                           spreadRadius: -3,
@@ -329,13 +329,13 @@ class _SafeZoneDetailScreenState extends State<SafeZoneDetailScreen> {
             padding: EdgeInsets.all(16),
             decoration: ShapeDecoration(
               color: isSelected
-                  ? const Color(0x0C00BD9D)
+                  ? const Color(0x0C00ACB2)
                   : Colors.white,
               shape: RoundedRectangleBorder(
                 side: BorderSide(
                   width: isSelected ? 2 : 1,
                   color: isSelected
-                      ? const Color(0xFF00BD9D)
+                      ? const Color(0xFF00ACB2)
                       : const Color(0xFFF3F4F6),
                 ),
                 borderRadius: BorderRadius.circular(16),
@@ -388,9 +388,9 @@ class _SafeZoneDetailScreenState extends State<SafeZoneDetailScreen> {
       width: double.infinity,
       padding: EdgeInsets.all(16),
       decoration: ShapeDecoration(
-        color: const Color(0x0C00BD9D),
+        color: const Color(0x0C00ACB2),
         shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0x1900BD9D)),
+          side: const BorderSide(width: 1, color: Color(0x1900ACB2)),
           borderRadius: BorderRadius.circular(16),
         ),
       ),
@@ -438,7 +438,7 @@ class _SafeZoneDetailScreenState extends State<SafeZoneDetailScreen> {
                       height: 24,
                       decoration: BoxDecoration(
                         color: _scheduleEnabled
-                            ? const Color(0xFF00BD9D)
+                            ? const Color(0xFF00ACB2)
                             : const Color(0xFFE5E7EB),
                         borderRadius: BorderRadius.circular(9999),
                       ),
@@ -473,7 +473,7 @@ class _SafeZoneDetailScreenState extends State<SafeZoneDetailScreen> {
               decoration: ShapeDecoration(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
-                  side: const BorderSide(width: 1, color: Color(0x3300BD9D)),
+                  side: const BorderSide(width: 1, color: Color(0x3300ACB2)),
                   borderRadius: BorderRadius.circular(24),
                 ),
               ),
@@ -483,12 +483,12 @@ class _SafeZoneDetailScreenState extends State<SafeZoneDetailScreen> {
                     width: 36,
                     height: 36,
                     decoration: const BoxDecoration(
-                      color: Color(0x1900BD9D),
+                      color: Color(0x1900ACB2),
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(
                       Icons.access_time_rounded,
-                      color: Color(0xFF00BD9D),
+                      color: Color(0xFF00ACB2),
                       size: 18,
                     ),
                   ),
@@ -508,7 +508,7 @@ class _SafeZoneDetailScreenState extends State<SafeZoneDetailScreen> {
                   Text(
                     '08:00 - 20:00',
                     style: TextStyle(
-                      color: Color(0xFF00BD9D),
+                      color: Color(0xFF00ACB2),
                       fontSize: ResponsiveHelper.sp(context, 16),
                       fontFamily: 'Lexend',
                       fontWeight: FontWeight.w700,
@@ -518,7 +518,7 @@ class _SafeZoneDetailScreenState extends State<SafeZoneDetailScreen> {
                   const SizedBox(width: 8),
                   const Icon(
                     Icons.chevron_right_rounded,
-                    color: Color(0xFF00BD9D),
+                    color: Color(0xFF00ACB2),
                     size: 20,
                   ),
                 ],

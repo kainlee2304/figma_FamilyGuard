@@ -52,7 +52,7 @@ class _ActivityReportScreenState extends State<ActivityReportScreen> {
         border: const Border(
           bottom: BorderSide(
             width: 1,
-            color: Color(0x1900BD9D),
+            color: Color(0x1900ACB2),
           ),
         ),
       ),
@@ -131,7 +131,7 @@ class _ActivityReportScreenState extends State<ActivityReportScreen> {
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
         decoration: ShapeDecoration(
-          color: isSelected ? AppColors.primary : const Color(0x1900BD9D),
+          color: isSelected ? AppColors.primary : const Color(0x1900ACB2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(9999),
           ),
@@ -161,7 +161,7 @@ class _ActivityReportScreenState extends State<ActivityReportScreen> {
         shape: RoundedRectangleBorder(
           side: const BorderSide(
             width: 1,
-            color: Color(0x0C00BD9D),
+            color: Color(0x0C00ACB2),
           ),
           borderRadius: BorderRadius.circular(24),
         ),
@@ -307,7 +307,7 @@ class _ActivityReportScreenState extends State<ActivityReportScreen> {
         shape: RoundedRectangleBorder(
           side: const BorderSide(
             width: 1,
-            color: Color(0x0C00BD9D),
+            color: Color(0x0C00ACB2),
           ),
           borderRadius: BorderRadius.circular(24),
         ),
@@ -421,7 +421,7 @@ class _ActivityReportScreenState extends State<ActivityReportScreen> {
             'HOÀN THÀNH',
             '08:02 AM',
             Icons.medication,
-            const Color(0x1900BD9D),
+            const Color(0x1900ACB2),
             AppColors.primary,
             const Color(0x1910B981),
             const Color(0xFF10B981),
@@ -474,7 +474,7 @@ class _ActivityReportScreenState extends State<ActivityReportScreen> {
         shape: RoundedRectangleBorder(
           side: const BorderSide(
             width: 1,
-            color: Color(0x0C00BD9D),
+            color: Color(0x0C00ACB2),
           ),
           borderRadius: BorderRadius.circular(24),
         ),
@@ -597,7 +597,7 @@ class CircularProgressPainter extends CustomPainter {
 
     // Completion arc (green/teal)
     final completionPaint = Paint()
-      ..color = const Color(0xFF00BD9D)
+      ..color = const Color(0xFF00ACB2)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 15
       ..strokeCap = StrokeCap.round;

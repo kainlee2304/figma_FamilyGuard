@@ -155,7 +155,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
                 ],
               ),
               child: const Icon(Icons.arrow_back_ios_new_rounded,
-                  size: 18, color: Color(0xFF00BD9D)),
+                  size: 18, color: Color(0xFF00ACB2)),
             ),
           ),
           Expanded(
@@ -536,7 +536,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
           color: Colors.white,
           child: Row(children: [
             Icon(Icons.favorite_rounded,
-                size: 20 * scale, color: const Color(0xFF00BD9D)),
+                size: 20 * scale, color: const Color(0xFF00ACB2)),
             SizedBox(width: 8 * scale),
             Text('FamilyGuard',
                 style: TextStyle(
@@ -593,7 +593,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
               borderRadius: BorderRadius.circular(6 * scale),
             ),
             child: Icon(Icons.favorite_rounded,
-                size: 13 * scale, color: const Color(0xFF00BD9D)),
+                size: 13 * scale, color: const Color(0xFF00ACB2)),
           ),
           SizedBox(width: 6 * scale),
           Text('FAMILYGUARD',
@@ -658,7 +658,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
               child: Container(
                 height: 34 * scale,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF00BD9D),
+                  color: const Color(0xFF00ACB2),
                   borderRadius: BorderRadius.circular(10 * scale),
                 ),
                 child: Row(
@@ -693,7 +693,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
                 height: 34 * scale,
                 decoration: BoxDecoration(
                   border: Border.all(
-                      color: const Color(0xFF00BD9D), width: 1.5),
+                      color: const Color(0xFF00ACB2), width: 1.5),
                   borderRadius: BorderRadius.circular(10 * scale),
                 ),
                 child: Center(
@@ -702,7 +702,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
                         fontFamily: 'Lexend',
                         fontSize: 11 * scale,
                         fontWeight: FontWeight.w700,
-                        color: const Color(0xFF00BD9D),
+                        color: const Color(0xFF00ACB2),
                       )),
                 ),
               ),
@@ -720,10 +720,10 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16 * scale),
-        border: Border.all(color: const Color(0x1900BD9D)),
+        border: Border.all(color: const Color(0x1900ACB2)),
         boxShadow: const [
           BoxShadow(
-              color: Color(0x1400BD9D), blurRadius: 16, offset: Offset(0, 4)),
+              color: Color(0x1400ACB2), blurRadius: 16, offset: Offset(0, 4)),
         ],
       ),
       child: Column(mainAxisSize: MainAxisSize.min, children: [
@@ -770,7 +770,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
               child: Container(
                 height: 38 * scale,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF00BD9D),
+                  color: const Color(0xFF00ACB2),
                   borderRadius: BorderRadius.circular(12 * scale),
                 ),
                 child: Row(
@@ -805,7 +805,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
                 height: 38 * scale,
                 decoration: BoxDecoration(
                   border: Border.all(
-                      color: const Color(0xFF00BD9D), width: 1.5),
+                      color: const Color(0xFF00ACB2), width: 1.5),
                   borderRadius: BorderRadius.circular(12 * scale),
                 ),
                 child: Center(
@@ -814,7 +814,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
                         fontFamily: 'Lexend',
                         fontSize: 12 * scale,
                         fontWeight: FontWeight.w700,
-                        color: const Color(0xFF00BD9D),
+                        color: const Color(0xFF00ACB2),
                       )),
                 ),
               ),
@@ -842,7 +842,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
             shape: BoxShape.circle,
           ),
           child: Icon(Icons.check_rounded,
-              size: 22 * scale, color: const Color(0xFF00BD9D)),
+              size: 22 * scale, color: const Color(0xFF00ACB2)),
         ),
         SizedBox(width: 10 * scale),
         Text('Đã hoàn thành!',
@@ -850,7 +850,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
               fontFamily: 'Lexend',
               fontSize: 14 * scale,
               fontWeight: FontWeight.w700,
-              color: const Color(0xFF00BD9D),
+              color: const Color(0xFF00ACB2),
             )),
       ]),
     );
@@ -885,7 +885,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
               fontFamily: 'Lexend',
               fontSize: ResponsiveHelper.sp(context, 14),
               fontWeight: FontWeight.w700,
-              color: const Color(0xFF00BD9D),
+              color: const Color(0xFF00ACB2),
             ),
           ),
         ]),
@@ -928,7 +928,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
                   boxShadow: isActive
                       ? const [
                           BoxShadow(
-                              color: Color(0x1400BD9D),
+                              color: Color(0x1400ACB2),
                               blurRadius: 6,
                               offset: Offset(0, 2)),
                         ]
@@ -961,7 +961,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0x1900BD9D)),
+        border: Border.all(color: const Color(0x1900ACB2)),
       ),
       child: Column(children: [
         _toggleRow(
@@ -994,7 +994,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
           color: AppColors.kPrimaryLight,
           shape: BoxShape.circle,
         ),
-        child: Icon(icon, size: 18, color: const Color(0xFF00BD9D)),
+        child: Icon(icon, size: 18, color: const Color(0xFF00ACB2)),
       ),
       const SizedBox(width: 12),
       Expanded(
@@ -1013,7 +1013,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
           width: 48, height: 28,
           padding: const EdgeInsets.all(2),
           decoration: BoxDecoration(
-            color: value ? const Color(0xFF00BD9D) : const Color(0xFFE5E7EB),
+            color: value ? const Color(0xFF00ACB2) : const Color(0xFFE5E7EB),
             borderRadius: BorderRadius.circular(14),
           ),
           child: AnimatedAlign(
@@ -1044,7 +1044,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
       padding: EdgeInsets.fromLTRB(24, 12, 24, 16 + bottomPad),
       decoration: const BoxDecoration(
         color: Colors.white,
-        border: Border(top: BorderSide(color: Color(0x1900BD9D))),
+        border: Border(top: BorderSide(color: Color(0x1900ACB2))),
       ),
       child: SizedBox(
         width: double.infinity,
@@ -1056,7 +1056,7 @@ class _NotificationPreviewScreenState extends State<NotificationPreviewScreen>
               ..showSnackBar(SnackBar(
                 content: const Text('Đã lưu cài đặt thông báo',
                     style: TextStyle(fontFamily: 'Lexend', color: Colors.white)),
-                backgroundColor: const Color(0xFF00BD9D),
+                backgroundColor: const Color(0xFF00ACB2),
                 behavior: SnackBarBehavior.floating,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12)),
@@ -1104,7 +1104,7 @@ class _WallpaperAccentPainter extends CustomPainter {
     final paint = Paint()..style = PaintingStyle.fill;
 
     // Large blurry orb top-right
-    paint.color = const Color(0xFF00BD9D).withAlpha(18);
+    paint.color = const Color(0xFF00ACB2).withAlpha(18);
     canvas.drawCircle(
       Offset(size.width * 0.8, size.height * 0.15),
       size.width * 0.5,
@@ -1120,7 +1120,7 @@ class _WallpaperAccentPainter extends CustomPainter {
     );
 
     // Small accent orb center
-    paint.color = const Color(0xFF00BD9D).withAlpha(10);
+    paint.color = const Color(0xFF00ACB2).withAlpha(10);
     canvas.drawCircle(
       Offset(size.width * 0.5, size.height * 0.5),
       size.width * 0.25,

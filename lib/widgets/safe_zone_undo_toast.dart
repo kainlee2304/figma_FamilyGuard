@@ -198,11 +198,11 @@ class _SafeZoneUndoToastWidgetState extends State<_SafeZoneUndoToastWidget>
   Widget _buildToastCard() {
     return Container(
       decoration: BoxDecoration(
-        color: const Color(0xFF00BD9D),
+        color: const Color(0xFF00ACB2),
         borderRadius: BorderRadius.circular(16),
         boxShadow: const [
           BoxShadow(
-            color: Color(0x3300BD9D),
+            color: Color(0x3300ACB2),
             blurRadius: 20,
             offset: Offset(0, 8),
             spreadRadius: -4,

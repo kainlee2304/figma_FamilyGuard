@@ -138,7 +138,7 @@ class _ReminderManagementScreenState extends State<ReminderManagementScreen> {
               child: const Icon(
                 Icons.arrow_back_ios_new_rounded,
                 size: 18,
-                color: Color(0xFF00BD9D),
+                color: Color(0xFF00ACB2),
               ),
             ),
           ),
@@ -377,10 +377,10 @@ class _ReminderManagementScreenState extends State<ReminderManagementScreen> {
         width: cardW,
         padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: const Color(0x0C00BD9D),
+          color: const Color(0x0C00ACB2),
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
-            color: const Color(0x4C00BD9D),
+            color: const Color(0x4C00ACB2),
             width: 1,
           ),
         ),
@@ -391,7 +391,7 @@ class _ReminderManagementScreenState extends State<ReminderManagementScreen> {
               width: 40,
               height: 40,
               decoration: const BoxDecoration(
-                color: Color(0x3300BD9D),
+                color: Color(0x3300ACB2),
                 shape: BoxShape.circle,
               ),
               child: Icon(

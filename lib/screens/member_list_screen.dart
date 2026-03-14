@@ -34,53 +34,34 @@ class MemberListScreen extends StatelessWidget {
   ];
 
   void _showFeaturePopup(BuildContext context, FamilyMember member) {
-    final features = [
-      _FeatureOption(
-        icon: Icons.medication_outlined,
-        label: 'Nhắc nhở uống thuốc',
-        color: const Color(0xFF8B5CF6),
-        bgColor: const Color(0xFFF3ECFF),
-        route: AppRoutes.reminderList,
-      ),
-      _FeatureOption(
-        icon: Icons.calendar_month_outlined,
-        label: 'Lịch hẹn khám bệnh',
-        color: const Color(0xFF14B8A6),
-        bgColor: AppColors.kPrimaryLight,
-        route: AppRoutes.medicalAppointment,
-      ),
-      _FeatureOption(
-        icon: Icons.directions_run_outlined,
-        label: 'Hoạt động thể chất',
-        color: const Color(0xFFF59E0B),
-        bgColor: const Color(0xFFFFF8E1),
-        route: AppRoutes.physicalActivity,
-      ),
-      _FeatureOption(
-        icon: Icons.favorite_outline,
-        label: 'Theo dõi sức khỏe',
-        color: const Color(0xFFEC4899),
-        bgColor: const Color(0xFFFCE4EC),
-        route: AppRoutes.activityReport,
-      ),
-    ];
-
-    AppDialog.showCustom(
+    showModalBottomSheet(
       context: context,
-      title: 'Chọn tính năng cho ${member.name}',
-      child: Builder(
-        builder: (dialogCtx) => GridView.count(
-          crossAxisCount: 2,
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          crossAxisSpacing: 12,
-          mainAxisSpacing: 12,
-          childAspectRatio: 1.2,
-          children: features.map((f) => _buildFeatureTile(dialogCtx, f)).toList(),
-        ),
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => _MemberFeatureSheet(
+        memberName: member.name,
+        onFeatureSelected: (feature) {
+          Navigator.pop(context);
+          switch (feature) {
+            case 'medicine':
+              Navigator.of(context).pushNamed(AppRoutes.reminderList);
+              break;
+            case 'appointment':
+              Navigator.of(context).pushNamed(AppRoutes.medicalAppointment);
+              break;
+            case 'activity':
+              Navigator.of(context).pushNamed(AppRoutes.physicalActivity);
+              break;
+            case 'health':
+              Navigator.of(context).pushNamed(AppRoutes.activityReport);
+              break;
+          }
+        },
       ),
     );
   }
+
+
 
   Widget _buildFeatureTile(BuildContext dialogCtx, _FeatureOption feature) {
     return GestureDetector(
@@ -174,7 +155,7 @@ class MemberListScreen extends StatelessWidget {
                         child: const Icon(
                           Icons.arrow_back_ios_new_rounded,
                           size: 18,
-                          color: Color(0xFF00BD9D),
+                          color: Color(0xFF00ACB2),
                         ),
                       ),
                     ),
@@ -281,7 +262,7 @@ class MemberListScreen extends StatelessWidget {
                       fontFamily: 'Lexend',
                       fontSize: 13,
                       fontWeight: FontWeight.w500,
-                      color: Color(0xFF00BD9D),
+                      color: Color(0xFF00ACB2),
                     ),
                   ),
                 ],
@@ -314,4 +295,158 @@ class _FeatureOption {
     required this.bgColor,
     required this.route,
   });
+}
+
+// Widget bottom sheet chọn tính năng
+class _MemberFeatureSheet extends StatelessWidget {
+  final String memberName;
+  final Function(String) onFeatureSelected;
+  const _MemberFeatureSheet({
+    required this.memberName,
+    required this.onFeatureSelected,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final features = [
+      {
+        'label': 'Nhắc nhở\nuống thuốc',
+        'icon': Icons.medication_outlined,
+        'bgColor': const Color(0xFFEDE7F6),
+        'iconColor': const Color(0xFF7E57C2),
+        'key': 'medicine',
+      },
+      {
+        'label': 'Lịch hẹn\nkhám bệnh',
+        'icon': Icons.calendar_month_outlined,
+        'bgColor': const Color(0xFFE8F8F7),
+        'iconColor': const Color(0xFF00ACB2),
+        'key': 'appointment',
+      },
+      {
+        'label': 'Hoạt động\nthể chất',
+        'icon': Icons.directions_run_rounded,
+        'bgColor': const Color(0xFFFFF3E0),
+        'iconColor': const Color(0xFFFFA000),
+        'key': 'activity',
+      },
+      {
+        'label': 'Theo dõi\nsức khỏe',
+        'icon': Icons.favorite_outline_rounded,
+        'bgColor': const Color(0xFFFCE4EC),
+        'iconColor': const Color(0xFFE91E63),
+        'key': 'health',
+      },
+    ];
+
+    return SafeArea(
+      child: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
+        ),
+        padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // Handle
+            Container(
+              width: 36, height: 4,
+              margin: const EdgeInsets.only(bottom: 20),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDDE2E8),
+                borderRadius: BorderRadius.circular(2)),
+            ),
+            // Title
+            Text(
+              'Chọn tính năng cho $memberName',
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                color: Color(0xFF00ACB2),
+              ),
+            ),
+            const SizedBox(height: 20),
+            // Grid 2x2
+            Row(children: [
+              Expanded(child: _card(context, features[0])),
+              const SizedBox(width: 12),
+              Expanded(child: _card(context, features[1])),
+            ]),
+            const SizedBox(height: 12),
+            Row(children: [
+              Expanded(child: _card(context, features[2])),
+              const SizedBox(width: 12),
+              Expanded(child: _card(context, features[3])),
+            ]),
+            const SizedBox(height: 16),
+            // Nút Hủy
+            GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(vertical: 12),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFF5F5F5),
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Text('Hủy',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.grey[600],
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                  )),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _card(BuildContext context, Map<String, dynamic> f) {
+    return GestureDetector(
+      onTap: () => onFeatureSelected(f['key'] as String),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 20),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: const Color(0xFFEEF2F6), width: 1.5),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.04),
+              blurRadius: 8,
+              offset: const Offset(0, 2),
+            )
+          ],
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                color: f['bgColor'] as Color,
+                shape: BoxShape.circle,
+              ),
+              child: Icon(f['icon'] as IconData,
+                color: f['iconColor'] as Color,
+                size: 26),
+            ),
+            const SizedBox(height: 10),
+            Text(f['label'] as String,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 13,
+                fontWeight: FontWeight.w600,
+                color: Color(0xFF1A1A1A),
+                height: 1.4,
+              )),
+          ],
+        ),
+      ),
+    );
+  }
 }

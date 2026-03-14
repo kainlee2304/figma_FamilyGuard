@@ -27,10 +27,10 @@ class _Role2HomepageState extends State<Role2Homepage> {
       name: 'Mẹ',
       statusLabel: 'Đang ở nhà',
       statusColor: Color(0xFF008A8E),
-      dotColor: Color(0xFF00ADB2),
+      dotColor: Color(0xFF00ACB2),
       statusBg: Color(0xFFE0F7F7),
       batteryLevel: 85,
-      batteryColor: Color(0xFF00ADB2),
+      batteryColor: Color(0xFF00ACB2),
       batteryIcon: Icons.battery_full,
       location: '123 Đường Nguyễn Huệ…',
       locationIcon: Icons.location_on,
@@ -39,7 +39,7 @@ class _Role2HomepageState extends State<Role2Homepage> {
       isOnline: true,
       avatarUrl: 'https://i.pravatar.cc/150?img=47',
       indicatorColor: Color(0xFF22C55E),
-      nameColor: Color(0xFF00ACB1),
+      nameColor: Color(0xFF00ACB2),
     ),
     _MemberData(
       name: 'Bố',
@@ -170,7 +170,7 @@ class _Role2HomepageState extends State<Role2Homepage> {
                 Text(
                   '${_getGreeting()}\nHuy',
                   style: TextStyle(
-                    color: const Color(0xFF00ACB1),
+                    color: const Color(0xFF00ACB2),
                     fontSize: greetSize,
                     fontFamily: 'Be Vietnam Pro',
                     fontWeight: FontWeight.w700,
@@ -254,8 +254,8 @@ class _Role2HomepageState extends State<Role2Homepage> {
           height: 8,
           decoration: BoxDecoration(
             color: isActive
-                ? const Color(0xFF00ADB2)
-                : const Color(0xFF00ADB2).withValues(alpha: 0.3),
+                ? const Color(0xFF00ACB2)
+                : const Color(0xFF00ACB2).withValues(alpha: 0.3),
             borderRadius: BorderRadius.circular(9999),
           ),
         );
@@ -284,7 +284,7 @@ class _Role2HomepageState extends State<Role2Homepage> {
               Text(
                 'Tiện ích',
                 style: TextStyle(
-                  color: const Color(0xFF00ACB1),
+                  color: const Color(0xFF00ACB2),
                   fontSize: titleSize,
                   fontFamily: 'Public Sans',
                   fontWeight: FontWeight.w700,
@@ -300,7 +300,7 @@ class _Role2HomepageState extends State<Role2Homepage> {
                 child: Text(
                   'Xem tất cả',
                   style: TextStyle(
-                    color: const Color(0xFF00ACB1),
+                    color: const Color(0xFF00ACB2),
                     fontSize: subTitleSize,
                     fontFamily: 'Be Vietnam Pro',
                     fontWeight: FontWeight.w500,
@@ -363,7 +363,7 @@ class _MemberCard extends StatelessWidget {
         ),
         shadows: const [
           BoxShadow(
-            color: Color(0x2600ADB2),
+            color: Color(0x2600ACB2),
             blurRadius: 40,
             offset: Offset(0, 10),
             spreadRadius: -10,

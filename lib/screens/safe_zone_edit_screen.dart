@@ -87,8 +87,8 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
                     CircleMarker(
                       point: center,
                       radius: _radius / 10,
-                      color: const Color(0x4C00BD9D),
-                      borderColor: const Color(0xFF00BD9D),
+                      color: const Color(0x4C00ACB2),
+                      borderColor: const Color(0xFF00ACB2),
                       borderStrokeWidth: 2,
                     ),
                   ],
@@ -107,9 +107,9 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
                   width: 256,
                   height: 256,
                   decoration: ShapeDecoration(
-                    color: const Color(0x4C00BD9D),
+                    color: const Color(0x4C00ACB2),
                     shape: RoundedRectangleBorder(
-                      side: const BorderSide(width: 2, color: Color(0xFF00BD9D)),
+                      side: const BorderSide(width: 2, color: Color(0xFF00ACB2)),
                       borderRadius: BorderRadius.circular(9999),
                     ),
                   ),
@@ -123,7 +123,7 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
                       width: 36,
                       height: 36,
                       decoration: const BoxDecoration(
-                        color: Color(0xFF00BD9D),
+                        color: Color(0xFF00ACB2),
                         shape: BoxShape.circle,
                       ),
                       child: const Icon(
@@ -136,7 +136,7 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
                       width: 4,
                       height: 8,
                       decoration: const BoxDecoration(
-                        color: Color(0xFF00BD9D),
+                        color: Color(0xFF00ACB2),
                       ),
                     ),
                   ],
@@ -152,7 +152,7 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
                       color: Colors.white.withValues(alpha: 0.90),
                       shape: RoundedRectangleBorder(
                         side: const BorderSide(
-                            width: 1, color: Color(0x3300BD9D)),
+                            width: 1, color: Color(0x3300ACB2)),
                         borderRadius: BorderRadius.circular(9999),
                       ),
                       shadows: const [
@@ -167,7 +167,7 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
                     child: Text(
                       _radiusLabel,
                       style: TextStyle(
-                        color: Color(0xFF00BD9D),
+                        color: Color(0xFF00ACB2),
                         fontSize: ResponsiveHelper.sp(context, 12),
                         fontFamily: 'Lexend',
                         fontWeight: FontWeight.w700,
@@ -188,7 +188,7 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
                       color: Colors.white,
                       shape: BoxShape.circle,
                       border: Border.all(
-                          width: 2, color: const Color(0xFF00BD9D)),
+                          width: 2, color: const Color(0xFF00ACB2)),
                       boxShadow: const [
                         BoxShadow(
                           color: Color(0x19000000),
@@ -207,7 +207,7 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
                     child: const Icon(
                       Icons.open_with_rounded,
                       size: 16,
-                      color: Color(0xFF00BD9D),
+                      color: Color(0xFF00ACB2),
                     ),
                   ),
                 ),
@@ -242,7 +242,7 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
               ),
               child: const Icon(
                 Icons.my_location_rounded,
-                color: Color(0xFF00BD9D),
+                color: Color(0xFF00ACB2),
                 size: 22,
               ),
             ),
@@ -369,7 +369,7 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
               child: Text(
                 'Lưu',
                 style: TextStyle(
-                  color: Color(0xFF00BD9D),
+                  color: Color(0xFF00ACB2),
                   fontSize: ResponsiveHelper.sp(context, 16),
                   fontFamily: 'Lexend',
                   fontWeight: FontWeight.w700,
@@ -465,13 +465,13 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
-                color: const Color(0x1900BD9D),
+                color: const Color(0x1900ACB2),
                 borderRadius: BorderRadius.circular(9999),
               ),
               child: Text(
                 'Đang hoạt động',
                 style: TextStyle(
-                  color: Color(0xFF00BD9D),
+                  color: Color(0xFF00ACB2),
                   fontSize: ResponsiveHelper.sp(context, 12),
                   fontFamily: 'Lexend',
                   fontWeight: FontWeight.w500,
@@ -516,7 +516,7 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
             Text(
               _radiusLabel,
               style: TextStyle(
-                color: Color(0xFF00BD9D),
+                color: Color(0xFF00ACB2),
                 fontSize: ResponsiveHelper.sp(context, 16),
                 fontFamily: 'Lexend',
                 fontWeight: FontWeight.w700,
@@ -531,14 +531,14 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
         SliderTheme(
           data: SliderThemeData(
             trackHeight: 8,
-            activeTrackColor: const Color(0xFF00BD9D),
-            inactiveTrackColor: const Color(0x3300BD9D),
-            thumbColor: const Color(0xFF00BD9D),
+            activeTrackColor: const Color(0xFF00ACB2),
+            inactiveTrackColor: const Color(0x3300ACB2),
+            thumbColor: const Color(0xFF00ACB2),
             thumbShape:
                 const RoundSliderThumbShape(enabledThumbRadius: 12),
             overlayShape:
                 const RoundSliderOverlayShape(overlayRadius: 20),
-            overlayColor: const Color(0x1900BD9D),
+            overlayColor: const Color(0x1900ACB2),
           ),
           child: Slider(
             value: _radius,
@@ -594,12 +594,12 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
                 height: 40,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: const Color(0x1900BD9D),
+                  color: const Color(0x1900ACB2),
                   borderRadius: BorderRadius.circular(24),
                 ),
                 child: const Icon(
                   Icons.shield_rounded,
-                  color: Color(0xFF00BD9D),
+                  color: Color(0xFF00ACB2),
                   size: 20,
                 ),
               ),
@@ -629,7 +629,7 @@ class _SafeZoneEditScreenState extends State<SafeZoneEditScreen> {
                     height: 24,
                     decoration: BoxDecoration(
                       color: _isActive
-                          ? const Color(0xFF00BD9D)
+                          ? const Color(0xFF00ACB2)
                           : const Color(0xFFE5E7EB),
                       borderRadius: BorderRadius.circular(9999),
                     ),

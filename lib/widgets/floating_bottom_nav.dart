@@ -38,7 +38,7 @@ class FloatingBottomNav extends StatelessWidget {
         borderRadius: BorderRadius.circular(9999),
         boxShadow: const [
           BoxShadow(
-            color: Color(0x3300ADB2),
+            color: Color(0x3300ACB2),
             blurRadius: 50,
             offset: Offset(0, 25),
             spreadRadius: -12,
@@ -61,20 +61,20 @@ class FloatingBottomNav extends StatelessWidget {
               width: containerSize,
               height: containerSize,
               decoration: ShapeDecoration(
-                color: isActive ? const Color(0xFF00ACB1) : Colors.transparent,
+                color: isActive ? const Color(0xFF00ACB2) : Colors.transparent,
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(9999)),
                 ),
                 shadows: isActive
                     ? const [
                         BoxShadow(
-                          color: Color(0x6600ADB2),
+                          color: Color(0x6600ACB2),
                           blurRadius: 6,
                           offset: Offset(0, 4),
                           spreadRadius: -4,
                         ),
                         BoxShadow(
-                          color: Color(0x6600ADB2),
+                          color: Color(0x6600ACB2),
                           blurRadius: 15,
                           offset: Offset(0, 10),
                           spreadRadius: -3,
