@@ -1,0 +1,135 @@
+import 'package:flutter/material.dart';
+import 'package:figma_app/core/utils/responsive/responsive_helper.dart';
+import 'safe_zone_active_screen.dart';
+import 'package:figma_app/core/widgets/app_header.dart';
+
+class SafeZoneScreen extends StatelessWidget {
+  SafeZoneScreen({Key? key}) : super(key: key);
+
+  final List<Map<String, dynamic>> members = [
+    {
+      'id': 'm1',
+      'name': 'Nguyễn Văn A',
+      'role': 'Người cao tuổi',
+      'avatar': 'A',
+      'activeZones': 2,
+      'color': const Color(0xFF80CBC4),
+    },
+    {
+      'id': 'm2',
+      'name': 'Trần Thị B',
+      'role': 'Người cao tuổi',
+      'avatar': 'B',
+      'activeZones': 1,
+      'color': const Color(0xFFFFCC80),
+    },
+    {
+      'id': 'm3',
+      'name': 'Lê Văn C',
+      'role': 'Người chăm sóc',
+      'avatar': 'C',
+      'activeZones': 3,
+      'color': const Color(0xFFCE93D8),
+    },
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFF6F8FA),
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const AppHeader(title: 'Vùng an toàn'),
+            Padding(
+              padding: EdgeInsets.fromLTRB(
+                ResponsiveHelper.horizontalPadding(context),
+                16, 
+                ResponsiveHelper.horizontalPadding(context),
+                8,
+              ),
+              child: Text(
+                'Chọn thành viên',
+                style: TextStyle(
+                  fontSize: ResponsiveHelper.sp(context, 16),
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: members.length,
+                itemBuilder: (context, index) {
+                  final member = members[index];
+                  return Card(
+                    margin:
+                        const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16)),
+                    elevation: 2,
+                    shadowColor: const Color(0xFF00ACB2).withOpacity(0.15),
+                    child: ListTile(
+                      contentPadding: const EdgeInsets.all(12),
+                      leading: Stack(children: [
+                        CircleAvatar(
+                          backgroundColor: member['color'],
+                          child: Text(member['avatar'],
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold)),
+                        ),
+                        Positioned(
+                            bottom: 0,
+                            right: 0,
+                            child: Container(
+                                width: 10,
+                                height: 10,
+                                decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                      color: Colors.white, width: 1.5),
+                                ))),
+                      ]),
+                      title: Text(member['name'],
+                          style: const TextStyle(fontWeight: FontWeight.w600)),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(member['role'],
+                              style: const TextStyle(
+                                  color: Colors.grey, fontSize: 12)),
+                          const SizedBox(height: 2),
+                          Row(children: [
+                            const Icon(Icons.shield,
+                                size: 12, color: Color(0xFF00ACB2)),
+                            const SizedBox(width: 4),
+                            Text('${member["activeZones"]} vùng an toàn đang bật',
+                                style: const TextStyle(
+                                    color: Color(0xFF00ACB2), fontSize: 12)),
+                          ]),
+                        ],
+                      ),
+                      trailing: const Icon(Icons.arrow_forward_ios,
+                          size: 16, color: Color(0xFF00ACB2)),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) =>
+                                  SafeZoneMemberScreen(member: member),
+                            ));
+                      },
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+

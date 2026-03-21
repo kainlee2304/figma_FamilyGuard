@@ -1,9 +1,9 @@
-import 'dart:async';
+﻿import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'theme/app_theme.dart';
-import 'routes/app_routes.dart';
-import 'services/safe_zone_service.dart';
+import 'package:figma_app/core/theme/app_theme.dart';
+import 'package:figma_app/core/routes/app_routes.dart';
+import 'package:figma_app/features/safe_zone/data/datasources/safe_zone_service.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -351,3 +351,4 @@ class _HoverBottomNavOverlayState extends State<_HoverBottomNavOverlay>
     );
   }
 }
+
